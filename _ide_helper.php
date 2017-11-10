@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.5.20 on 2017-11-09.
+ * Generated for Laravel 5.5.20 on 2017-11-10.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -12964,6 +12964,38 @@ namespace HieuLe\Active\Facades {
  
 }
 
+namespace Mews\Purifier\Facades { 
+
+    class Purifier {
+        
+        /**
+         * 
+         *
+         * @param $dirty
+         * @param null $config
+         * @return mixed 
+         * @static 
+         */ 
+        public static function clean($dirty, $config = null)
+        {
+            return \Mews\Purifier\Purifier::clean($dirty, $config);
+        }
+        
+        /**
+         * Get HTMLPurifier instance.
+         *
+         * @return \HTMLPurifier 
+         * @static 
+         */ 
+        public static function getInstance()
+        {
+            return \Mews\Purifier\Purifier::getInstance();
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -15082,6 +15114,8 @@ namespace  {
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
 
     class Active extends \HieuLe\Active\Facades\Active {}
+
+    class Purifier extends \Mews\Purifier\Facades\Purifier {}
  
 }
 
