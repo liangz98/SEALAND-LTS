@@ -92,6 +92,14 @@ body {
         color: #b3b3b3;
       }
     }
+
+    .meta {
+      font-size: .9em;
+      color: #b3b3b3;
+    }
+    .rpely-content {
+      margin: 6px 0;
+    }
   }
 
   .pagination {
@@ -142,5 +150,33 @@ body {
       font-size: 28px;
       line-height: 38px;
     }
+  }
+}
+.topic-reply {
+  hr {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .meta {
+    font-size: .9em;
+    color: #b3b3b3;
+  }
+}
+
+/* Notifications badge */
+.notifications-badge {
+  margin-top: -1;
+
+  .badge-fade {
+    background-color: #EBE8E8;
+  }
+
+  .badge-hint {
+    background-color: #d15b47 !important;;
   }
 }

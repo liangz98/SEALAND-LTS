@@ -17,6 +17,14 @@ class AppServiceProvider extends ServiceProvider
 	{
 	    // 注册观察者
 		\App\Models\User::observe(\App\Observers\UserObserver::class);
+		\App\Models\Membership::observe(\App\Observers\MembershipObserver::class);
+		\App\Models\Member::observe(\App\Observers\MemberObserver::class);
+		\App\Models\RenewCertification::observe(\App\Observers\RenewCertificationObserver::class);
+		\App\Models\Certification::observe(\App\Observers\CertificationObserver::class);
+		\App\Models\RegisterCourse::observe(\App\Observers\RegisterCourseObserver::class);
+		\App\Models\Training::observe(\App\Observers\TrainingObserver::class);
+		\App\Models\News::observe(\App\Observers\NewsObserver::class);
+		\App\Models\Reply::observe(\App\Observers\ReplyObserver::class);
 		\App\Models\Topic::observe(\App\Observers\TopicObserver::class);
 		\App\Models\TrainingCategory::observe(\App\Observers\TrainingCategoryObserver::class);
 		\App\Models\Project::observe(\App\Observers\ProjectObserver::class);
@@ -38,6 +46,10 @@ class AppServiceProvider extends ServiceProvider
         }
         if (app()->environment() == 'local' || app()->environment() == 'testing') {
             $this->app->register(\Summerblue\Generator\GeneratorsServiceProvider::class);
+        }
+    
+        if (app()->isLocal()) {
+            $this->app->register(\VIACreative\SudoSu\ServiceProvider::class);
         }
     }
 }

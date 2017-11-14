@@ -1,0 +1,165 @@
+<?php
+
+namespace App\Admin\Controllers;
+
+use App\Models\Member;
+
+use Encore\Admin\Form;
+use Encore\Admin\Grid;
+use Encore\Admin\Facades\Admin;
+use Encore\Admin\Layout\Content;
+use App\Http\Controllers\Controller;
+use Encore\Admin\Controllers\ModelForm;
+
+class MemberController extends Controller
+{
+    use ModelForm;
+
+    /**
+     * Index interface.
+     *
+     * @return Content
+     */
+    public function index()
+    {
+        return Admin::content(function (Content $content) {
+
+            $content->header('会员');
+            $content->description('列表');
+
+            $content->body($this->grid());
+        });
+    }
+
+    /**
+     * Edit interface.
+     *
+     * @param $id
+     * @return Content
+     */
+    public function edit($id)
+    {
+        return Admin::content(function (Content $content) use ($id) {
+
+            $content->header('会员');
+            $content->description('编辑');
+
+            $content->body($this->form()->edit($id));
+        });
+    }
+
+    /**
+     * Create interface.
+     *
+     * @return Content
+     */
+    public function create()
+    {
+        return Admin::content(function (Content $content) {
+
+            $content->header('会员');
+            $content->description('新增');
+
+            $content->body($this->form());
+        });
+    }
+
+    /**
+     * Make a grid builder.
+     *
+     * @return Grid
+     */
+    protected function grid()
+    {
+        return Admin::grid(Member::class, function (Grid $grid) {
+
+            // 列表内容
+            $grid->id('ID')->sortable();
+    
+            $grid->column('member_number', '会员编号')->editable();
+            $grid->column('name', '名称')->editable();
+            $grid->column('gender', '性别');
+            $grid->column('email', 'E-Mail');
+            $grid->column('mobile_phone', '手机号码');
+            $states = [ // 设置text、color、和存储值
+                'on'  => ['value' => '01', 'text' => '正常', 'color' => 'primary'],
+                'off' => ['value' => '02', 'text' => '禁用', 'color' => 'default'],
+            ];
+            $grid->column('status', '状态')->switch($states);
+
+            $grid->created_at('创建时间');
+            $grid->updated_at('更新时间');
+    
+            
+            // 筛选功能
+            $grid->filter(function (Grid\Filter $filter) {
+                // $filter->disableIdFilter();
+                $filter->like('name', '名字');
+        
+                $filter->like('email', 'E-Mail');
+    
+                $filter->equal('status', '状态')
+                       ->select([
+                           '01' => '正常',
+                           '02' => '禁用',
+                       ]);
+            });
+        });
+    }
+
+    /**
+     * Make a form builder.
+     *
+     * @return Form
+     */
+    protected function form()
+    {
+        return Admin::form(Member::class, function (Form $form) {
+            
+            $form->tab('基本信息', function (Form $form) {
+                $form->display('id', 'ID');
+    
+                $form->text('member_number', '会员编号');
+                $form->text('name', '名称');
+                
+                $form->email('email', 'E-Mail');
+                $form->mobile('mobile_phone', '手机号码');
+                     // ->options(['mask' => '999 9999 9999']);
+                $states = [
+                    'on'  => ['value' => '01', 'text' => '正常', 'color' => 'primary'],
+                    'off' => ['value' => '02', 'text' => '禁用', 'color' => 'default'],
+                ];
+                $form->switch('status', '状态')->states($states);
+    
+                $form->display('created_at', '创建时间');
+                $form->display('updated_at', '更新时间');
+            })->tab("个人信息", function (Form $form) {
+                $states = [
+                    'on'  => ['value' => 'M', 'text' => '男', 'color' => 'primary'],
+                    'off' => ['value' => 'F', 'text' => '女', 'color' => 'danger'],
+                ];
+                $form->switch('gender', '性别')->states($states)->default('M');
+                $form->email('oth_email', '其他邮箱')->rules('nullable');
+                $form->mobile('oth_mobile_phone', '其他手机号码')->options(['mask' => '999 9999 9999']);
+                $form->text('mailing_address', '邮寄地址');
+                $form->text('mailing_name', '收件人');
+                $form->mobile('mailing_mobile', '收件人电话')->options(['mask' => '999 9999 9999']);
+            })->tab("地址信息", function (Form $form) {
+                $form->text('country_code', '国家');
+                $form->text('state_code', '省份');
+                $form->text('city_code', '城市');
+                $form->text('street', '街道');
+                $form->text('address', '地址');
+            })->tab("公司信息", function (Form $form) {
+                $form->text('company_name', '公司名称');
+                $form->text('title', '职位');
+                $form->text('company_address', '公司地址');
+                
+            })->tab("认证信息", function (Form $form) {
+                $form->text('certification_id', '认证');
+                
+            });
+           
+        });
+    }
+}
