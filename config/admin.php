@@ -5,7 +5,7 @@ return [
     /*
      * Laravel-admin name.
      */
-    'name'      => 'Laravel-admin',
+    'name'      => 'SeaLand-admin',
 
     /*
      * Logo in admin panel header.
@@ -145,7 +145,7 @@ return [
     /*
      * Version displayed in footer.
      */
-    'version'   => '1.5.x-dev',
+    'version'   => '1.0.x-TLS',
 
     /*
      * Settings for extensions.

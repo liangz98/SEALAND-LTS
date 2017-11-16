@@ -26,7 +26,7 @@
 </style>
 
 <div class="title">
-	SeaLand - 管理后台
+	SeaLand Admin
 </div>
 <div class="links">
 	<a href="https://github.com/liangz98/SEALAND-LTS" target="_blank">Github</a>
