@@ -17,6 +17,8 @@ Route::group([
 
     // 用户
     $router->resource('users', UserController::class);
+    $router->resource('topics', TopicController::class);
+    
     // 会员
     $router->resource('members', MemberController::class);
     $router->resource('certifications', CertificationController::class);

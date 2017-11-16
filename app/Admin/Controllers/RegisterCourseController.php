@@ -72,6 +72,8 @@ class RegisterCourseController extends Controller
     protected function grid()
     {
         return Admin::grid(RegisterCourse::class, function (Grid $grid) {
+            // 默认为每页20条
+            $grid->paginate(10);
     
             $grid->model()->orderBy('id', 'desc');  // 按ID倒序
             $grid->disableCreation();   // 禁用创建按钮

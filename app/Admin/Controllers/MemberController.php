@@ -10,6 +10,8 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
+use Encore\Admin\Widgets\Box;
+use Encore\Admin\Widgets\Table;
 
 class MemberController extends Controller
 {
@@ -63,6 +65,23 @@ class MemberController extends Controller
             $content->body($this->form());
         });
     }
+    
+    public function show(Member $member) {
+        return Admin::content(function (Content $content) use ($member) {
+            $content->header('会员');
+            $content->description('信息');
+            
+            $headers = [
+                '字段',
+                '值'
+            ];
+    
+            $table2 = new Table($headers, $member->toArray());
+    
+            $content->body((new Box('Table-2', $table2))->style('info')
+                                                        ->solid());
+        });
+    }
 
     /**
      * Make a grid builder.
@@ -72,12 +91,30 @@ class MemberController extends Controller
     protected function grid()
     {
         return Admin::grid(Member::class, function (Grid $grid) {
+            $grid->model()->with('certifications');
+            
+            // 默认为每页20条
+            $grid->paginate(10);
 
             // 列表内容
-            $grid->id('ID')->sortable();
+            $grid->id('ID')->sortable()
+                ->display(function ($value) {
+                    return "<a href='/admin/members/$value'>$value</a>";
+                });
     
             $grid->column('member_number', '会员编号')->editable();
             $grid->column('name', '名称')->editable();
+    
+            $grid->column('expand')->expand(function () {
+                $certifications = $this->certifications;
+                foreach ($certifications as $certification){
+                    array_only($certification, ['id', 'start_date', 'expiry_date']);
+                }
+    
+                // dd($certifications);
+                return new Table([], $certifications);
+            }, 'Certification');
+            
             $grid->column('gender', '性别');
             $grid->column('email', 'E-Mail');
             $grid->column('mobile_phone', '手机号码');
@@ -88,7 +125,7 @@ class MemberController extends Controller
             $grid->column('status', '状态')->switch($states);
 
             $grid->created_at('创建时间');
-            $grid->updated_at('更新时间');
+            // $grid->updated_at('更新时间');
     
             
             // 筛选功能
@@ -129,7 +166,7 @@ class MemberController extends Controller
                     'on'  => ['value' => '01', 'text' => '正常', 'color' => 'primary'],
                     'off' => ['value' => '02', 'text' => '禁用', 'color' => 'default'],
                 ];
-                $form->switch('status', '状态')->states($states);
+                $form->switch('status', '状态')->states($states)->default('01');
     
                 $form->display('created_at', '创建时间');
                 $form->display('updated_at', '更新时间');

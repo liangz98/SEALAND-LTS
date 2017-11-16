@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\RenewCertification;
+use App\Models\Membership;
 
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -11,7 +11,7 @@ use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 
-class RenewCertificationController extends Controller
+class MembershipController extends Controller
 {
     use ModelForm;
 
@@ -24,7 +24,7 @@ class RenewCertificationController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('认证续期');
+            $content->header('会员续期');
             $content->description('列表');
 
             $content->body($this->grid());
@@ -41,7 +41,7 @@ class RenewCertificationController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('认证续期');
+            $content->header('会员续期');
             $content->description('编辑');
 
             $content->body($this->form()->edit($id));
@@ -57,7 +57,7 @@ class RenewCertificationController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('认证续期');
+            $content->header('会员续期');
             $content->description('新增');
 
             $content->body($this->form());
@@ -71,20 +71,9 @@ class RenewCertificationController extends Controller
      */
     protected function grid()
     {
-        return Admin::grid(RenewCertification::class, function (Grid $grid) {
-            // 默认为每页20条
-            $grid->paginate(10);
+        return Admin::grid(Membership::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
-    
-            $grid->column('number', '课程编号');
-            $grid->column('level', '课程级别');
-            $grid->column('first_name', 'FirstName');
-            $grid->column('last_name', 'LastName');
-            $grid->column('birth_date', '生日');
-            $grid->column('user_name', '用户名');
-            $grid->column('user_password', '密码');
-            
 
             $grid->created_at();
             $grid->updated_at();
@@ -98,7 +87,7 @@ class RenewCertificationController extends Controller
      */
     protected function form()
     {
-        return Admin::form(RenewCertification::class, function (Form $form) {
+        return Admin::form(Membership::class, function (Form $form) {
 
             $form->display('id', 'ID');
 

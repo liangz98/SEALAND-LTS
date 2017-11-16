@@ -41,8 +41,8 @@ class UserController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('用户');
+            $content->description('编辑');
 
             $content->body($this->form()->edit($id));
         });
@@ -57,8 +57,8 @@ class UserController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header('用户');
+            $content->description('新增');
 
             $content->body($this->form());
         });
@@ -72,6 +72,8 @@ class UserController extends Controller
     protected function grid()
     {
         return Admin::grid(User::class, function (Grid $grid) {
+            // 默认为每页20条
+            $grid->paginate(10);
             // 显示id字段，并将这一列设置为可排序列
             $grid->id('ID')->sortable();
 
@@ -80,17 +82,20 @@ class UserController extends Controller
             // $grid->column('name');
 
             // 显示 name 字段
-            $grid->name('用户名');
-            $grid->column('email');
-
-            // 显示 deleted 字段，通过 display($callback) 方法来格式化显示输出
-            $grid->column('deleted', '删除?')->display(function ($deleted) {
-                return $deleted ? '是' : '否';
-            });
-
+            $grid->name('用户名')->editable();
+            $grid->avatar()->image('',30,30);
+            $grid->email()->prependIcon('envelope');
+    
+    
+            $states = [ // 设置text、color、和存储值
+                'on'  => ['value' => '01', 'text' => '正常', 'color' => 'primary'],
+                'off' => ['value' => '02', 'text' => '禁用', 'color' => 'default'],
+            ];
+            $grid->column('status', '状态')->switch($states);
+            
             // 时间字段的列显示
-            $grid->created_at();
-            $grid->updated_at();
+            $grid->created_at('创建时间');
+            // $grid->updated_at();
         });
     }
 
@@ -104,9 +109,21 @@ class UserController extends Controller
         return Admin::form(User::class, function (Form $form) {
 
             $form->display('id', 'ID');
+    
+            $form->text('name', '名称');
+            $form->display('email', 'E-Mail');
+            // 修改上传目录
+            $form->image('avatar', '头像')
+                 ->move('images/avatars')->uniqueName();
+            $form->simditor('introduction', '介绍');
+            $states = [
+                'on'  => ['value' => '01', 'text' => '正常', 'color' => 'primary'],
+                'off' => ['value' => '02', 'text' => '禁用', 'color' => 'default'],
+            ];
+            $form->switch('status', '状态')->states($states)->default('01');
 
-            $form->display('created_at', 'Created At');
-            $form->display('updated_at', 'Updated At');
+            $form->display('created_at', '创建时间');
+            $form->display('updated_at', '修改时间');
         });
     }
 }
