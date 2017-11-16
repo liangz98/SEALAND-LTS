@@ -19,7 +19,7 @@ class Simditor extends Field {
         '/js/module.js',
         '/js/hotkeys.js',
         '/js/uploader.js',
-        // '/js/simditor.js',
+        '/js/simditor.js',
     ];
     
     public function render() {
