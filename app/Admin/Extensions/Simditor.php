@@ -23,6 +23,7 @@ class Simditor extends Field {
     ];
     
     public function render() {
+        $nouse = '11';
         $name = $this->formatName($this->column);
         
         $this->script = <<<EOT
