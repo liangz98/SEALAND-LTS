@@ -104,7 +104,6 @@ class MemberController extends Controller
     
             $grid->column('member_number', '会员编号')->editable();
             $grid->column('name', '名称')->editable();
-    
             $grid->column('expand','认证')->expand(function () {
                 $certifications = $this->certifications;
                 
@@ -126,7 +125,6 @@ class MemberController extends Controller
     
             $grid->column('gender', '性别')->display(function ($value) {
                 return $value == 'M'?trans('dataDict.male'):trans('dataDict.female');
-                
             });
             $grid->column('email', 'E-Mail');
             $grid->column('mobile_phone', '手机号码');
@@ -144,6 +142,8 @@ class MemberController extends Controller
             $grid->filter(function (Grid\Filter $filter) {
                 // $filter->disableIdFilter();
                 $filter->like('name', '名字');
+    
+                $filter->like('member_number', '档案编号');
         
                 $filter->like('email', 'E-Mail');
     

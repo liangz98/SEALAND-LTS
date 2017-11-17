@@ -21,6 +21,7 @@ Route::group([
     
     // 会员
     $router->resource('members', MemberController::class);
+    $router->resource('memberships', MembershipController::class);
     $router->resource('certifications', CertificationController::class);
     $router->resource('renewCertifications', RenewCertificationController::class);
     // 课程

@@ -24,7 +24,7 @@ class MembershipController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('会员续期');
+            $content->header('会员资格');
             $content->description('列表');
 
             $content->body($this->grid());
@@ -41,7 +41,7 @@ class MembershipController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('会员续期');
+            $content->header('会员资格');
             $content->description('编辑');
 
             $content->body($this->form()->edit($id));
@@ -57,7 +57,7 @@ class MembershipController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('会员续期');
+            $content->header('会员资格');
             $content->description('新增');
 
             $content->body($this->form());
@@ -74,9 +74,13 @@ class MembershipController extends Controller
         return Admin::grid(Membership::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
-
-            $grid->created_at();
-            $grid->updated_at();
+    
+            $grid->column('member.name', '会员');
+            $grid->column('start_date', '发证日期')->format('YYYY-MM-DD');
+            $grid->column('expiry_date', '到期日期')->format('YYYY-MM-DD');
+            
+            // $grid->created_at();
+            // $grid->updated_at();
         });
     }
 
@@ -90,7 +94,7 @@ class MembershipController extends Controller
         return Admin::form(Membership::class, function (Form $form) {
 
             $form->display('id', 'ID');
-
+    
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });
