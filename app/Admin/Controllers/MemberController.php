@@ -124,7 +124,10 @@ class MemberController extends Controller
                 return new Table($headers, $certifications);
             }, '认证详情');
     
-            $grid->column('gender', '性别');
+            $grid->column('gender', '性别')->display(function ($value) {
+                return $value == 'M'?trans('dataDict.male'):trans('dataDict.female');
+                
+            });
             $grid->column('email', 'E-Mail');
             $grid->column('mobile_phone', '手机号码');
             $states = [ // 设置text、color、和存储值
