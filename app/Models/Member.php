@@ -13,4 +13,12 @@ class Member extends Model
     public function certifications() {
         return $this->hasMany(Certification::class, 'member_id');
     }
+    
+    /**
+     * 多对多, 获得用户认证对应的课程。
+     */
+    public function trainings()
+    {
+        return $this->belongsToMany(Training::class, 'certifications');
+    }
 }

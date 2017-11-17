@@ -105,16 +105,25 @@ class MemberController extends Controller
             $grid->column('member_number', '会员编号')->editable();
             $grid->column('name', '名称')->editable();
     
-            $grid->column('expand')->expand(function () {
+            $grid->column('expand','认证')->expand(function () {
                 $certifications = $this->certifications;
-                foreach ($certifications as $certification){
-                    array_only($certification, ['id', 'start_date', 'expiry_date']);
+                
+                // 两种遍历处理数组的方法:都可用
+                foreach ($certifications as $key => $certification) {
+                    $certification = array_only($certification, ['id', 'start_date', 'expiry_date', 'number', 'level', 'training.name']);
+                    
+                    $certifications[$key] = $certification;
                 }
     
-                // dd($certifications);
-                return new Table([], $certifications);
-            }, 'Certification');
-            
+                // 两种遍历处理数组的方法:都可用
+                // for ($i = 0; $i < count($certifications); $i++) {
+                //     $certifications[$i] = array_only($certifications[$i], ['id', 'start_date', 'expiry_date']);
+                // }
+    
+                $headers = ['ID', '课程编号', '级别', '发证日期', '到期日期'];
+                return new Table($headers, $certifications);
+            }, '认证详情');
+    
             $grid->column('gender', '性别');
             $grid->column('email', 'E-Mail');
             $grid->column('mobile_phone', '手机号码');
