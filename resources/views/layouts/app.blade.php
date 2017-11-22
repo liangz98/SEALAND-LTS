@@ -16,6 +16,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Rev slider css -->
     <link href="css/revolution/css/settings.css" rel="stylesheet">
