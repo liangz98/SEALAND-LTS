@@ -72,6 +72,9 @@ class MembershipController extends Controller
     protected function grid()
     {
         return Admin::grid(Membership::class, function (Grid $grid) {
+    
+            // 默认为每页20条
+            $grid->paginate(10);
 
             $grid->id('ID')->sortable();
     
