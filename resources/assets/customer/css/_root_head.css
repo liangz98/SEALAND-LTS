@@ -4901,6 +4901,14 @@ iframe {
   }
 }
 
+.widget_ab_fa li a{
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.widget_ab_fa li a:hover {
+  color: #2a61d6;
+}
+
 .widget_ab_item .item_icon,
 .widget_latst_item .item_icon{
   float: left;
