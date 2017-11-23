@@ -146,6 +146,11 @@ iframe {
   border: none;
 }
 
+.text-white{color:#fff !important;;}
+.m-top-30 {
+  margin-top: 30px;
+}
+
 /* Main title css
 ============================================================================================ */
 .main_title {
@@ -4604,6 +4609,7 @@ iframe {
   /*background: url(../img/footer-bg.jpg) no-repeat scroll center center;*/
   background-size: cover;
   padding: 88px 0px 56px 0px;
+  background-color: #333;
 }
 
 .f_title {
@@ -4893,6 +4899,30 @@ iframe {
     -webkit-transform: translate3d(4px, 0, 0);
     transform: translate3d(4px, 0, 0);
   }
+}
+
+.widget_ab_item .item_icon,
+.widget_latst_item .item_icon{
+  float: left;
+  width: 20%;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.widget_ab_item .widget_ab_item_text,
+.widget_latst_item .widget_latst_item_text {
+  display: inline-block;
+  width: 70%;
+}
+.widget_ab_item .item_icon{
+  float: left;
+  width: 10%;
+  display: inline-block;
+  margin-right: 15px;
+}
+.widget_ab_item .widget_ab_item_text {
+  display: inline-block;
+  width: 80%;
 }
 
 /* End Footer Area css
