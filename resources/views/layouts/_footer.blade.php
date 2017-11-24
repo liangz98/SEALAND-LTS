@@ -5,19 +5,19 @@
             <div class="row">
                 <div class="col-md-3 col-xs-6">
                     <aside class="f_widget about_widget">
-                        <img src="images/logo.png" alt="">
-                        <p>施蓝德防腐技术咨询（北京）有限公司简介。</p>
-
+                        <div class="f_title">
+                            <img src="images/logo.png" alt="">
+                            <p>施蓝德防腐技术咨询（北京）有限公司简介。</p>
+                        </div>
+                        <ul class="list-inline widget_ab_fa">
+                            <li>-  <a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href=""><i class="fa fa-behance"></i></a></li>
+                            <li><a href=""><i class="fa fa-dribbble"></i></a>  - </li>
+                        </ul>
                     </aside>
-
-                    <ul class="list-inline widget_ab_fa">
-                        <li>-  <a href=""><i class="fa fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href=""><i class="fa fa-behance"></i></a></li>
-                        <li><a href=""><i class="fa fa-dribbble"></i></a>  - </li>
-                    </ul>
                 </div>
                 <div class="col-md-3 col-xs-6">
                     <aside class="f_widget link_widget">
