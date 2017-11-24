@@ -47,7 +47,7 @@
       font-size: 2.5rem;
     }
   }
-  @media (max-width: 991px) {
+  @media (min-width: 768px) {
     .pricing-item {
       max-width: 357px;
       margin: 0px auto 30px;
