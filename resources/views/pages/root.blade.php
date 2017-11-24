@@ -186,7 +186,7 @@
 
 			<div class="row pricing-content">
 				<div class="pricing-tables block-1-4 group">
-					<div class="bgrid col-md-3">
+					<div class="bgrid col-md-3 pricing-item">
 						<div class="price-block">
 							<div class="top-part">
 								<h3 class="plan-title">初级</h3>
@@ -206,7 +206,7 @@
 						</div>
 					</div> <!-- /price-block -->
 
-					<div class="bgrid col-md-3">
+					<div class="bgrid col-md-3 pricing-item">
 						<div class="price-block primary">
 							<div class="top-part" data-info="推荐">
 								<h3 class="plan-title">标准</h3>
@@ -227,7 +227,7 @@
 						</div>
 					</div> <!-- /price-block -->
 
-					<div class="bgrid col-md-3">
+					<div class="bgrid col-md-3 pricing-item">
 						<div class="price-block">
 							<div class="top-part">
 								<h3 class="plan-title">进阶</h3>
@@ -248,7 +248,7 @@
 						</div>
 					</div> <!-- /price-block -->
 
-					<div class="bgrid col-md-3">
+					<div class="bgrid col-md-3 pricing-item">
 						<div class="price-block">
 							<div class="top-part">
 								<h3 class="plan-title">高级</h3>

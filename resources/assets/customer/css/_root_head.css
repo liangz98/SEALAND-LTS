@@ -448,7 +448,8 @@ iframe {
 
 @media (max-width: 991px) {
   .main_menu_area .navbar.navbar-default .nav.navbar-nav li {
-    margin-right: 0px;
+    margin-top: 4px;
+    margin-right: 30px;
   }
 }
 

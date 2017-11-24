@@ -9020,6 +9020,13 @@ body {
   }
 }
 
+@media (max-width: 991px) {
+  .pricing .pricing-item {
+    max-width: 357px;
+    margin: 0px auto 30px;
+  }
+}
+
 .pricing .pricing-content {
   margin-top: 6.6rem;
   max-width: 1280px;
