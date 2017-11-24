@@ -13,6 +13,10 @@ return [
     
     'call_us' => 'Call us',
     'contact_us' => 'Contact us',
+
+    'latest_news' => 'LATEST NEWS',
+    'from_out_blog' => 'FROM OUR BLOG',
+    'pricing' => 'Pricing',
     
     'quick_link' => 'Quick Links',
     'our_partners' => 'OUR PARTNERS',
