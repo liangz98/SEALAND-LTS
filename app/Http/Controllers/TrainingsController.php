@@ -13,12 +13,14 @@ class TrainingsController extends Controller
     {
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
-
-	public function index()
-	{
-		$trainings = Training::paginate();
-		return view('trainings.index', compact('trainings'));
-	}
+    
+    public function index() {
+        $trainings = Training::where('status', '01')->paginate(10);
+        // dd($trainings);
+        
+        // $trainings = Training::paginate();
+        return view('trainings.index', compact('trainings'));
+    }
 
     public function show(Training $training)
     {

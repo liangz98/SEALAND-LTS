@@ -8963,6 +8963,8 @@ body {
   background-color: #d15b47 !important;
 }
 
+/* 首页 */
+
 .pricing {
   padding: 80px 0px;
   background: #EAEAED;
@@ -9200,5 +9202,19 @@ body {
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+/* 首页 */
+
+.trainings-body {
+  padding: 80px 0px;
+  background: #EAEAED;
+}
+
+/* 登录/注册 */
+
+.login-body {
+  padding: 80px 0px;
+  background: #EAEAED;
 }
 
