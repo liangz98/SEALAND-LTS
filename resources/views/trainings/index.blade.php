@@ -22,7 +22,9 @@
                         <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th>课程名称</th> <th>课程编号</th> <th>剩余名额</th> <th>培训地点</th> <th>开始时间</th> <th>结束时间</th>
+                            <th>课程名称</th> <th class="hidden-xs">课程编号</th>
+                            <th>剩余名额</th> <th class="hidden-xs">培训地点</th>
+                            <th>开始时间</th> <th class="hidden-xs">结束时间</th>
                             <th class="text-right">操作</th>
                         </tr>
                         </thead>
@@ -38,11 +40,11 @@
                                     </a>
                                 </td>
 
-                                <td>{{$training->number}}</td>
+                                <td class="hidden-xs">{{$training->number}}</td>
                                 <td><strong>{{ $training->total - $training->apply_count }}</strong></td>
-                                <td>{{ str_limit( $training->location, 20) }}</td>
+                                <td class="hidden-xs">{{ str_limit( $training->location, 20) }}</td>
                                 <td>{{ date('Y-m-d', strtotime($training->start_date)) }}</td>
-                                <td>{{ date('Y-m-d', strtotime($training->end_date)) }}</td>
+                                <td class="hidden-xs">{{ date('Y-m-d', strtotime($training->end_date)) }}</td>
 
                                 <td class="text-right">
                                     <a class="btn btn-xs btn-primary" href="{{ route('trainings.show', $training->id) }}">
