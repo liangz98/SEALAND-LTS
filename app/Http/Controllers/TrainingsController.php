@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Training;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TrainingRequest;
@@ -15,8 +16,12 @@ class TrainingsController extends Controller
     }
     
     public function index() {
-        $trainings = Training::where('status', '01')->paginate(10);
-        // dd($trainings);
+        $trainings = Training::where([
+                    ['status', '01'],
+                    // ['start_date', '>', Carbon::now()],
+                ])
+                ->orderBy('start_date')
+                ->paginate(10);
         
         // $trainings = Training::paginate();
         return view('trainings.index', compact('trainings'));

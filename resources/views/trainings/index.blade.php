@@ -23,14 +23,14 @@
                         <tr>
                             <th class="text-center">#</th>
                             <th>课程名称</th> <th>课程编号</th> <th>剩余名额</th> <th>培训地点</th> <th>开始时间</th> <th>结束时间</th>
-                            <th class="text-right">OPTIONS</th>
+                            <th class="text-right">操作</th>
                         </tr>
                         </thead>
 
                         <tbody>
-                        @foreach($trainings as $training)
+                        @foreach($trainings as $key => $training)
                             <tr>
-                                <td class="text-center"><strong>{{$training->id}}</strong></td>
+                                <td class="text-center"><strong>{{ $key + 1 }}</strong></td>
 
                                 <td>
                                     <a href="{{ route('trainings.show', $training->id) }}">
@@ -39,7 +39,7 @@
                                 </td>
 
                                 <td>{{$training->number}}</td>
-                                <td>{{ $training->total - $training->apply_count }}</td>
+                                <td><strong>{{ $training->total - $training->apply_count }}</strong></td>
                                 <td>{{ str_limit( $training->location, 20) }}</td>
                                 <td>{{ date('Y-m-d', strtotime($training->start_date)) }}</td>
                                 <td>{{ date('Y-m-d', strtotime($training->end_date)) }}</td>
@@ -49,12 +49,12 @@
                                         报名
                                     </a>
 
-                                    <form action="{{ route('trainings.destroy', $training->id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Delete? Are you sure?');">
-                                        {{csrf_field()}}
-                                        <input type="hidden" name="_method" value="DELETE">
+                                    {{--<form action="{{ route('trainings.destroy', $training->id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Delete? Are you sure?');">--}}
+                                        {{--{{csrf_field()}}--}}
+                                        {{--<input type="hidden" name="_method" value="DELETE">--}}
 
-                                        <button type="submit" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i> </button>
-                                    </form>
+                                        {{--<button type="submit" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i> </button>--}}
+                                    {{--</form>--}}
                                 </td>
                             </tr>
                         @endforeach
