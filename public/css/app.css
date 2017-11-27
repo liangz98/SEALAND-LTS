@@ -9209,6 +9209,7 @@ body {
 .trainings-body {
   padding: 80px 0px;
   background: #EAEAED;
+  background-image: url("/images/training/introbg.jpg");
 }
 
 /* 登录/注册 */
