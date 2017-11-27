@@ -12,7 +12,7 @@
             <div class="panel-heading">
                 <h1>
                     <i class="glyphicon glyphicon-align-justify"></i> Training
-                    <a class="btn btn-success pull-right" href="{{ route('trainings.create') }}"><i class="glyphicon glyphicon-plus"></i> Create</a>
+                    {{--<a class="btn btn-success pull-right" href="{{ route('trainings.create') }}"><i class="glyphicon glyphicon-plus"></i> Create</a>--}}
                 </h1>
             </div>
 
