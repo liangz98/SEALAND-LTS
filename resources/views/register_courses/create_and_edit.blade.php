@@ -1,60 +1,50 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="container">
     <div class="col-md-10 col-md-offset-1">
         <div class="panel panel-default">
-            
+
             <div class="panel-heading">
                 <h1>
-                    <i class="glyphicon glyphicon-edit"></i> RegisterCourse /
-                    @if($register_course->id)
-                        Edit #{{$register_course->id}}
-                    @else
-                        Create
-                    @endif
+                    <i class="glyphicon glyphicon-edit"></i> 报名培训
+
+                    <a href="{{ $trainingDefaultFile }}" class="btn btn-success pull-right">报表名下载</a>
                 </h1>
             </div>
 
             @include('common.error')
 
             <div class="panel-body">
-                @if($register_course->id)
-                    <form action="{{ route('register_courses.update', $register_course->id) }}" method="POST" accept-charset="UTF-8">
-                        <input type="hidden" name="_method" value="PUT">
-                @else
-                    <form action="{{ route('register_courses.store') }}" method="POST" accept-charset="UTF-8">
-                @endif
-
+                <form action="{{ route('register_courses.store') }}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="hidden" name="training_id" value="{{ $training->id }}">
 
-                    
-                <div class="form-group">
-                    <label for="user_id-field">User_id</label>
-                    <input class="form-control" type="text" name="user_id" id="user_id-field" value="{{ old('user_id', $register_course->user_id ) }}" />
-                </div> 
-                <div class="form-group">
-                    <label for="training_id-field">Training_id</label>
-                    <input class="form-control" type="text" name="training_id" id="training_id-field" value="{{ old('training_id', $register_course->training_id ) }}" />
-                </div> 
-                <div class="form-group">
-                    <label for="deleted-field">Deleted</label>
-                    <input class="form-control" type="text" name="deleted" id="deleted-field" value="{{ old('deleted', $register_course->deleted ) }}" />
-                </div> 
-                <div class="form-group">
-                	<label for="status-field">Status</label>
-                	<input class="form-control" type="text" name="status" id="status-field" value="{{ old('status', $register_course->status ) }}" />
-                </div>
+                    <div class="form-group">
+                        <label for="name-field">课程名称</label>
+                        <input class="form-control" type="text" id="name-field" value="{{ old('name', $training->name ) }}" readonly="readonly" />
+                    </div>
+                    <div class="form-group">
+                        <label for="start_date-field">开始时间</label>
+                        <input class="form-control" type="text" id="start_date-field" value="{{ old('start_date', $training->start_date ) }}" readonly="readonly" />
+                    </div>
+                    <div class="form-group">
+                        <label for="end_date-field">结束时间</label>
+                        <input class="form-control" type="text" id="end_date-field" value="{{ old('end_date', $training->end_date ) }}" readonly="readonly" />
+                    </div>
+                    <div class="form-group">
+                        <label for="application_form-field">报名表</label>
+                        <input type="file" name="application_form">
+                        <p class="help-block">将填好的报名表上传。</p>
+                    </div>
 
                     <div class="well well-sm">
-                        <button type="submit" class="btn btn-primary">Save</button>
-                        <a class="btn btn-link pull-right" href="{{ route('register_courses.index') }}"><i class="glyphicon glyphicon-backward"></i>  Back</a>
+                        <button type="submit" class="btn btn-primary">提交</button>
+                        <a class="btn btn-link pull-right" href="{{ route('trainings.index') }}"><i class="glyphicon glyphicon-backward"></i>  Back</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-
 @endsection

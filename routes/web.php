@@ -25,7 +25,6 @@ Auth::routes();
 
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 Route::resource('projects', 'ProjectsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
-Route::resource('training_categories', 'TrainingCategoriesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('categories', 'CategoriesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
@@ -37,9 +36,15 @@ Route::resource('notifications', 'NotificationsController', ['only' => ['index']
 
 // 无权限提醒路由
 Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
+
+
 Route::resource('news', 'NewsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('training_categories', 'TrainingCategoriesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('trainings', 'TrainingsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
-Route::resource('register_courses', 'RegisterCoursesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+Route::resource('register_courses', 'RegisterCoursesController', ['only' => ['index', 'show', 'store', 'update', 'edit', 'destroy']]);
+Route::get('/register_courses/create/{trainings}', 'RegisterCoursesController@create')->name('register_courses.create');
+
 Route::resource('certifications', 'CertificationsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('renew_certifications', 'RenewCertificationsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('members', 'MembersController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);

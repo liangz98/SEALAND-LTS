@@ -8370,6 +8370,10 @@ body {
   margin-bottom: 60px;
 }
 
+.message-body {
+  padding: 80px 0px 0px 0px;
+}
+
 .header-a-logo {
   font-size: 24px;
   line-height: 22px;
@@ -9204,12 +9208,32 @@ body {
   }
 }
 
-/* 首页 */
+/* 用户 */
 
-.trainings-body {
+.users-show-body,
+.users-edit-body {
+  padding: 80px 0px;
+}
+
+/* 培训课程 */
+
+.trainings-index-body,
+.trainings-show-body {
   padding: 80px 0px;
   background: #EAEAED;
   background-image: url("/images/training/introbg.jpg");
+}
+
+/* 报名培训 */
+
+.register_courses-create-body {
+  padding: 80px 0px;
+  background: #EAEAED;
+  background-image: url("/images/training/introbg.jpg");
+}
+
+.register_courses-create-body .re-pos {
+  padding-top: 10px;
 }
 
 /* 登录/注册 */

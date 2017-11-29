@@ -4,6 +4,7 @@ namespace App\Admin\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Member;
+use App\Models\RegisterCourse;
 use App\Models\Training;
 use App\Models\User;
 use Carbon\Carbon;
@@ -53,12 +54,14 @@ class HomeController extends Controller
                 
                 // DB::table('users')->where('status', '01')->count();
             $content->row(function (Row $row) {
+                $appliaction_count = RegisterCourse::where('status', '01')->count();
                 $user_Count = User::where('status', '01')->count();
                 $member_Count = Member::where('status', '01')->count();
                 $training_Count = Training::where('end_date', '>', Carbon::now())->count();
-                $row->column(4, new InfoBox('有效课程：', 'book', 'aqua', '/admin/trainings', $training_Count));
-                $row->column(4, new InfoBox('会员', 'user', 'green', '/admin/members', $member_Count));
-                $row->column(4, new InfoBox('用户', 'users', 'yellow', '/admin/users', $user_Count));
+                $row->column(3, new InfoBox('报名申请：', 'book', 'aqua', '/admin/registerCourses', $appliaction_count));
+                $row->column(3, new InfoBox('有效课程：', 'book', 'aqua', '/admin/trainings', $training_Count));
+                $row->column(3, new InfoBox('会员', 'user', 'green', '/admin/members', $member_Count));
+                $row->column(3, new InfoBox('用户', 'users', 'yellow', '/admin/users', $user_Count));
             });
     
             $content->row(function (Row $row) {

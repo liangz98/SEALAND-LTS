@@ -3,7 +3,7 @@
 @section('title', $user->name . ' 的个人中心')
 
 @section('content')
-
+<div class="container">
 	<div class="row">
 
 		<div class="col-lg-3 col-md-3 hidden-sm hidden-xs user-info">
@@ -59,4 +59,5 @@
 
 		</div>
 	</div>
+</div>
 @stop

@@ -54,6 +54,10 @@ class User extends Authenticatable
         return $this->hasMany(Reply::class);
     }
     
+    public function registerCourses() {
+        return $this->hasMany(RegisterCourse::class);
+    }
+    
     /**
      * 用于其他功能仅限验证时判断用户是否当前登录用户
      * @param $model

@@ -10,17 +10,12 @@ class RegisterCourseRequest extends Request
         {
             // CREATE
             case 'POST':
-            {
-                return [
-                    // CREATE ROLES
-                ];
-            }
             // UPDATE
             case 'PUT':
             case 'PATCH':
             {
                 return [
-                    // UPDATE ROLES
+                    'application_form'       => 'required',
                 ];
             }
             case 'GET':
@@ -35,7 +30,7 @@ class RegisterCourseRequest extends Request
     public function messages()
     {
         return [
-            // Validation messages
+            'application_form.required' => '请上传报表名',
         ];
     }
 }

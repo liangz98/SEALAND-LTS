@@ -20,10 +20,10 @@
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Rev slider css -->
-    <link href="css/revolution/css/settings.css" rel="stylesheet">
-    <link href="css/revolution/css/layers.css" rel="stylesheet">
-    <link href="css/revolution/css/navigation.css" rel="stylesheet">
-    <link href="css/animate-css/animate.css" rel="stylesheet">
+    <link href="/css/revolution/css/settings.css" rel="stylesheet">
+    <link href="/css/revolution/css/layers.css" rel="stylesheet">
+    <link href="/css/revolution/css/navigation.css" rel="stylesheet">
+    <link href="/css/animate-css/animate.css" rel="stylesheet">
 
     <!-- Head -->
     <link href="/css/_root_head.css" rel="stylesheet">
@@ -35,13 +35,11 @@
 
         @include('layouts._header')
 
-        <div class="container">
+        <section class="{{ route_class() }}-body">
             @include('layouts._message')
-        </div>
-
-        <div>
             @yield('content')
-        </div>
+        </section>
+
 
         @include('layouts._footer')
     </div>
@@ -56,16 +54,16 @@
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Rev slider js -->
-    <script src="js/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script src="js/revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="js/revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <script src="js/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="js/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="js/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/js/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="/js/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="/js/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/js/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="/js/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/js/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/js/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
 
     <!-- Head js -->
-    <script src="js/_root_head.js"></script>
+    <script src="/js/_root_head.js"></script>
     @yield('scripts')
 </body>
 </html>
