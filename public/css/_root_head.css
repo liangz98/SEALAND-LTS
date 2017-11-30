@@ -457,12 +457,21 @@ iframe {
 .main_menu_area .navbar.navbar-default .nav.navbar-nav li a {
   padding: 0px;
   color: #131313;
-  background: transparent;
+  /*background: transparent;*/
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: normal;
   line-height: 77px;
+}
+
+.dropdown-customer li {
+  margin-right: 0px !important;
+}
+
+.dropdown-customer li a {
+  padding-left: 20px !important;
+  line-height: 40px !important;
 }
 
 /* 响应菜单栏间隔 */

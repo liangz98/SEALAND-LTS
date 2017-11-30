@@ -79,7 +79,7 @@
                                 {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
+                                <ul class="dropdown-menu dropdown-customer" role="menu">
                                     {{--@can('manage_contents')--}}
                                         {{--<li>--}}
                                             {{--<a href="{{ url(config('administrator.uri')) }}">--}}
