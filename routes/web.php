@@ -43,6 +43,7 @@ Route::resource('training_categories', 'TrainingCategoriesController', ['only' =
 Route::resource('trainings', 'TrainingsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
 Route::resource('register_courses', 'RegisterCoursesController', ['only' => ['index', 'show', 'store', 'update', 'edit', 'destroy']]);
+// 新增培训申请
 Route::get('/register_courses/create/{trainings}', 'RegisterCoursesController@create')->name('register_courses.create');
 
 Route::resource('certifications', 'CertificationsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);

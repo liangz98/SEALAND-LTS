@@ -8370,6 +8370,12 @@ body {
   margin-bottom: 60px;
 }
 
+/* 中间部分底色 */
+
+.base-body {
+  background: #EAEAED;
+}
+
 .message-body {
   padding: 80px 0px 0px 0px;
 }
@@ -9213,6 +9219,20 @@ body {
 .users-show-body,
 .users-edit-body {
   padding: 80px 0px;
+}
+
+/* 用户 */
+
+.members-show-body {
+  padding: 80px 0px;
+}
+
+.members-show-body .nav-tabs {
+  margin-bottom: 20px;
+}
+
+.members-show-body .dl-horizontal dt {
+  margin-bottom: 10px;
 }
 
 /* 培训课程 */

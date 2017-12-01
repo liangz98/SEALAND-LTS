@@ -43,7 +43,10 @@
 				<div class="panel-body">
 					<ul class="nav nav-tabs">
 						<li class="{{ active_class(if_query('tab', null)) }}">
-							<a href="{{ route('users.show', $user->id) }}">Ta 的话题</a>
+							<a href="{{ route('users.show', $user->id) }}">课程申请</a>
+						</li>
+						<li class="{{ active_class(if_query('tab', 'topics')) }}">
+							<a href="{{ route('users.show', [$user->id, 'tab' => 'topics']) }}">Ta 的话题</a>
 						</li>
 						<li class="{{ active_class(if_query('tab', 'replies')) }}">
 							<a href="{{ route('users.show', [$user->id, 'tab' => 'replies']) }}">Ta 的回复</a>
@@ -51,8 +54,10 @@
 					</ul>
 					@if (if_query('tab', 'replies'))
 						@include('users._replies', ['replies' => $user->replies()->with('topic')->recent()->paginate(5)])
-					@else
+					@elseif (if_query('tab', 'topics'))
 						@include('users._topics', ['topics' => $user->topics()->recent()->paginate(5)])
+					@else
+						@include('users._register_courses', ['registerCourses' => $user->registerCourses()->with('training')->recent()->paginate(5)])
 					@endif
 				</div>
 			</div>

@@ -58,6 +58,18 @@ class User extends Authenticatable
         return $this->hasMany(RegisterCourse::class);
     }
     
+    public function memberships() {
+        return $this->hasMany(Membership::class, 'member_id');
+    }
+    
+    /**
+     * 关联关系, 用 hasOne 表示一对一
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function member() {
+        return $this->hasOne(Member::class);
+    }
+    
     /**
      * 用于其他功能仅限验证时判断用户是否当前登录用户
      * @param $model

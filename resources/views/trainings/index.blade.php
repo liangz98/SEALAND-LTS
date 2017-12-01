@@ -17,7 +17,7 @@
 
         <div class="panel-body">
             @if($trainings->count())
-                <table class="table table-condensed table-striped">
+                <table class="table table-striped">
                     <thead>
                     <tr>
                         <th class="text-center">#</th>

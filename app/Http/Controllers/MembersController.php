@@ -20,9 +20,10 @@ class MembersController extends Controller
 		return view('members.index', compact('members'));
 	}
 
-    public function show(Member $member)
-    {
-        return view('members.show', compact('member'));
+    public function show() {
+        $user = \Auth::user();
+        $member = $user->member;
+        return view('members.show', compact('member', 'user'));
     }
 
 	public function create(Member $member)

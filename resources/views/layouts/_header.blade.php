@@ -90,6 +90,12 @@
                                     {{--@endcan--}}
 
                                     <li>
+                                        <a href="{{ route('members.show', Auth::id()) }}">
+                                            <span class="fa fa-id-card-o" aria-hidden="true"></span>
+                                            会员信息
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="{{ route('users.show', Auth::id()) }}">
                                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                             个人中心

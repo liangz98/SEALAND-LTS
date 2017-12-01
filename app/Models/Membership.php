@@ -9,4 +9,13 @@ class Membership extends Model
     public function member() {
         return $this->belongsTo(Member::class, 'member_id');
     }
+    
+    public function user() {
+        return $this->belongsTo(User::class, 'member_id');
+    }
+    
+    public function scopeExpiryRecent($query) {
+        // 按照创建时间排序
+        return $query->orderBy('expiry_date', 'desc');
+    }
 }

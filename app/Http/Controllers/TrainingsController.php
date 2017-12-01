@@ -21,6 +21,7 @@ class TrainingsController extends Controller
                     // ['start_date', '>', Carbon::now()],
                 ])
                 ->orderBy('start_date')
+                // ->get();
                 ->paginate(10);
         
         // $trainings = Training::paginate();

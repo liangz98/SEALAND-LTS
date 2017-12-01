@@ -25,4 +25,12 @@ class Member extends Model
     {
         return $this->belongsToMany(Training::class, 'certifications');
     }
+    
+    /**
+     * 获得拥有此会员的用户。
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

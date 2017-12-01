@@ -1699,6 +1699,7 @@ iframe {
 ============================================================================================ */
 .our_blog_area {
   padding: 80px 0px;
+  background: #FFFFFF;
 }
 
 .our_blog_inner .col-md-4:last-child .our_blog_item {

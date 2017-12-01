@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
+	<div class="col-md-10 col-md-offset-1">
+		<div class="panel panel-default">
 
-	<div class="container">
-		<div class="panel panel-default col-md-10 col-md-offset-1">
 			<div class="panel-heading">
-				<h4>
+				<h1>
 					<i class="glyphicon glyphicon-edit"></i> 编辑个人资料
-				</h4>
+				</h1>
 			</div>
 
 			@include('common.error')
@@ -24,7 +25,7 @@
 					</div>
 					<div class="form-group">
 						<label for="email-field">邮 箱</label>
-						<input class="form-control" type="text" name="email" id="email-field" value="{{ old('email', $user->email ) }}" />
+						<input class="form-control" type="text" name="email" id="email-field" value="{{ old('email', $user->email ) }}" readonly="readonly" />
 					</div>
 					<div class="form-group">
 						<label for="introduction-field">个人简介</label>
@@ -46,5 +47,24 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 @endsection
+
+@section('styles')
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/simditor.css') }}">
+@stop
+
+@section('scripts')
+	<script type="text/javascript"  src="{{ asset('js/module.js') }}"></script>
+	<script type="text/javascript"  src="{{ asset('js/hotkeys.js') }}"></script>
+	<script type="text/javascript"  src="{{ asset('js/uploader.js') }}"></script>
+	<script type="text/javascript"  src="{{ asset('js/simditor.js') }}"></script>
+
+	<script>
+		$(document).ready(function(){
+			var editor = new Simditor({
+				textarea: $('#introduction-field'),
+			});
+		});
+	</script>
+@stop

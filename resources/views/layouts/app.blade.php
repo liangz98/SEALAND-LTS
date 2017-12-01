@@ -35,7 +35,7 @@
 
         @include('layouts._header')
 
-        <section class="{{ route_class() }}-body">
+        <section class="base-body {{ route_class() }}-body">
             @include('layouts._message')
             @yield('content')
         </section>
