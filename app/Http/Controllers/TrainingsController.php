@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Training;
+use App\Models\TrainingCategory;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -16,16 +17,25 @@ class TrainingsController extends Controller
     }
     
     public function index() {
-        $trainings = Training::where([
+        $trainingCategories = TrainingCategory::where([
                     ['status', '01'],
-                    // ['start_date', '>', Carbon::now()],
-                ])
-                ->orderBy('start_date')
+                ])->orderBy('order')
+                  ->get();
+        
+        
+        if (count($trainingCategories)) {
+            $trainings = Training::where([
+                ['status', '01'],
+                ['category_id', $trainingCategories->first()->id],
+                ['start_date', '>', Carbon::now()],
+            ])
+                                 ->orderBy('start_date')
                 // ->get();
-                ->paginate(10);
+                                 ->paginate(10);
+        }
         
         // $trainings = Training::paginate();
-        return view('trainings.index', compact('trainings'));
+        return view('trainings.index', compact('trainings', 'trainingCategories'));
     }
 
     public function show(Training $training)

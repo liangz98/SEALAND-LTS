@@ -16,55 +16,40 @@
         </div>
 
         <div class="panel-body">
-            @if($trainings->count())
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th class="text-center">#</th>
-                        <th>课程名称</th> <th class="hidden-xs">课程编号</th>
-                        <th>剩余名额</th> <th class="hidden-xs">培训地点</th>
-                        <th>开始时间</th> <th class="hidden-xs">结束时间</th>
-                        <th class="text-right">操作</th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    @foreach($trainings as $key => $training)
-                        <tr>
-                            <td class="text-center"><strong>{{ $key + 1 }}</strong></td>
-
-                            <td>
-                                <a href="{{ route('trainings.show', $training->id) }}">
-                                    {{$training->name}}
-                                </a>
-                            </td>
-
-                            <td class="hidden-xs">{{$training->number}}</td>
-                            <td><strong>{{ $training->total - $training->apply_count }}</strong></td>
-                            <td class="hidden-xs">{{ str_limit( $training->location, 20) }}</td>
-                            <td>{{ date('Y-m-d', strtotime($training->start_date)) }}</td>
-                            <td class="hidden-xs">{{ date('Y-m-d', strtotime($training->end_date)) }}</td>
-
-                            <td class="text-right">
-                                <a class="btn btn-xs btn-primary" href="{{ route('register_courses.create', $training->id) }}">
-                                    报名
-                                </a>
-
-                                {{--<form action="{{ route('trainings.destroy', $training->id) }}" method="POST" style="display: inline;" onsubmit="return confirm('Delete? Are you sure?');">--}}
-                                    {{--{{csrf_field()}}--}}
-                                    {{--<input type="hidden" name="_method" value="DELETE">--}}
-
-                                    {{--<button type="submit" class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-trash"></i> </button>--}}
-                                {{--</form>--}}
-                            </td>
-                        </tr>
+            <ul class="nav nav-pills">
+                @if($trainingCategories->count())
+                    @foreach($trainingCategories as $key => $trainingCategory)
+                        @if ($key == 0)
+                            <li role="presentation" class="{{ active_class(if_query('tab', null)) }}">
+                                <a href="{{ route('trainings.index') }}">{{ $trainingCategory->name }}</a>
+                            </li>
+                        @else
+                            <li role="presentation" class="{{ active_class(if_query('tab', $trainingCategory->id)) }}">
+                                <a href="{{ route('trainings.index', [$trainingCategory->id, 'tab' => $trainingCategory->id]) }}">{{ $trainingCategory->name }}</a>
+                            </li>
+                        @endif
                     @endforeach
-                    </tbody>
-                </table>
-                {!! $trainings->render() !!}
-            @else
-                <h3 class="text-center alert alert-info">Empty!</h3>
-            @endif
+
+                    @if (if_query('tab', null))
+                        @include('trainings._trainings_list', ['trainings' => $trainings])
+                    @else
+                        @foreach($trainingCategories as $key => $trainingCategory)
+                            @if (if_query('tab', $trainingCategory->id))
+                                @include('trainings._trainings_list', ['trainings' => \App\Models\Training::where([['category_id', $trainingCategory->id]])->paginate(10)])
+                            @endif
+                        @endforeach
+                    @endif
+                @else
+                    <h3 class="text-center alert alert-info">Empty!</h3>
+                @endif
+
+
+
+
+                {{--<li role="presentation" class="active"><a href="#">Home</a></li>--}}
+                {{--<li role="presentation"><a href="#">Profile</a></li>--}}
+                {{--<li role="presentation"><a href="#">Messages</a></li>--}}
+            </ul>
         </div>
     </div>
 </div>

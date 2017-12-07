@@ -39,7 +39,7 @@ Route::get('permission-denied', 'PagesController@permissionDenied')->name('permi
 
 
 Route::resource('news', 'NewsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
-Route::resource('training_categories', 'TrainingCategoriesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('training_categories', 'TrainingCategoriesController', ['only' => ['show']]);
 Route::resource('trainings', 'TrainingsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
 Route::resource('register_courses', 'RegisterCoursesController', ['only' => ['index', 'show', 'store', 'update', 'edit', 'destroy']]);
