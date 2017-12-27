@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/liangz98/HelloLaravel/blob/master/public/images/logo_trans2.png"> SEA LAND
+    <img src="https://github.com/liangz98/SEALAND-LTS/blob/master/public/images/logo_trans.png" width="32px" height="32px"> SEA LAND
 </p>
 
 
