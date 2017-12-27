@@ -6,7 +6,7 @@
                 <div class="col-md-3 col-xs-6">
                     <aside class="f_widget about_widget">
                         <div class="f_title">
-                            <img src="/images/logo_trans.png" alt="">
+                            <img src="/images/logo_trans.png" width="64px" height="64px" alt="">
                             <p>施蓝德防腐技术咨询（北京）有限公司简介。</p>
                         </div>
                         <ul class="list-inline widget_ab_fa">
