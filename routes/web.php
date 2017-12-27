@@ -18,6 +18,7 @@
 Route::get('/w_bootstrap', function () {
     return view( 'welcome_bootstrap');
 });
+Route::get('excel/export','ExcelController@export');
 
 Route::get('/', 'PagesController@root')->name('root');
 

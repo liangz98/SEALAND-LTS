@@ -185,6 +185,8 @@ return [
         // Laravel-Administrator
         Frozennode\Administrator\AdministratorServiceProvider::class,
 
+        // Laravel Excel v2.1.* for Laravel 5
+        Maatwebsite\Excel\ExcelServiceProvider::class,
     ],
 
     /*
@@ -233,7 +235,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];
