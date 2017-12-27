@@ -4,6 +4,7 @@ namespace App\Admin\Controllers;
 
 use App\Models\RegisterCourse;
 
+use DB;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Facades\Admin;
@@ -138,6 +139,28 @@ class RegisterCourseController extends Controller
                  ]);
     
             $form->display('created_at', '申请时间');
+    
+            $form->saving(function (Form $form) {
+                // 取出保存前的状态
+                $savingStatus = $form->model()->status;
+    
+                // 保存后处理可报名人数
+                $form->saved(function (Form $form) use($savingStatus) {
+                    $training = DB::table('trainings')
+                                  ->where('id', $form->model()->training_id);
+        
+                    // 保存前不为"通过", 保存后通过, 已确认人数+1
+                    if ($savingStatus != '02' && $form->model()->status == '02') {
+                        $training->increment('apply_count', 1);
+                    }
+                    // 保存前为"通过", 保存后不通过, 已确认人数-1
+                    if ($savingStatus == '02' && $form->model()->status != '02') {
+                        $training->decrement('apply_count', 1);
+                    }
+                });
+            });
+    
+            
         });
     }
 }
