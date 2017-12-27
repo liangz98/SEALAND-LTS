@@ -88,21 +88,6 @@ class RegisterCourseController extends Controller
             $grid->column('member.email', '邮箱');
             
             $grid->created_at('申请时间');
-            // $grid->updated_at();
-    
-            // $grid->column('status', '状态')->display(function ($value) {
-            //     $str = '';
-            //     if ($value == '01') {
-            //         $str = '申请';
-            //     } else if ($value == '02') {
-            //         $str = '审核通过';
-            //     } else if ($value == '03') {
-            //         $str = '拒绝';
-            //     } else if ($value == '04') {
-            //         $str = '取消';
-            //     }
-            //     return $str;
-            // });
     
             $grid->status('状态')
                  ->select([
@@ -123,22 +108,34 @@ class RegisterCourseController extends Controller
     {
         return Admin::form(RegisterCourse::class, function (Form $form) {
     
-            $form->display('id', 'ID');
+            $form->tab('基本信息', function (Form $form) {
+                $form->display('id', 'ID');
     
-            $form->display('training.name', '课程');
-            $form->display('member.name', '会员');
-            $form->display('member.member_number', '编号');
-            $form->display('member.email', '邮箱');
+                $form->display('training.name', '培训课程');
+                $form->display('member.name', '会员');
+                $form->display('member.member_number', '编号');
     
-            $form->select('status', '状态')
-                 ->options([
-                     '01' => '申请',
-                     '02' => '审核通过',
-                     '03' => '拒绝',
-                     '04' => '取消',
-                 ]);
+                $form->select('status', '状态')
+                     ->options([
+                         '01' => '申请',
+                         '02' => '审核通过',
+                         '03' => '拒绝',
+                         '04' => '取消',
+                     ]);
     
-            $form->display('created_at', '申请时间');
+                $form->display('created_at', '申请时间');
+            })->tab("公司信息", function (Form $form) {
+                $form->text('company_name', '公司名称')->rules('nullable');
+                $form->text('en_company_name', '公司名称(英文)')->rules('nullable');
+                $form->text('company_address', '公司地址')->rules('nullable');
+                $form->text('en_company_address', '公司地址(英文)')->rules('nullable');
+                $form->mobile('company_phone', '公司电话')->rules('nullable');
+                $form->mobile('company_fax', '公司传真')->rules('nullable');
+                // $form->text('mailing_address', '邮寄地址');
+                // $form->text('mailing_name', '收件人');
+                // $form->mobile('mailing_mobile', '收件人电话')->options(['mask' => '999 9999 9999']);
+            });
+            
     
             $form->saving(function (Form $form) {
                 // 取出保存前的状态

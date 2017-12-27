@@ -49,11 +49,11 @@
                     </tr>
                     <tr>
                         <td class="text-center">开始时间</td>
-                        <td><label>{{ $training->start_date }}</label></td>
+                        <td><label>{{ date('Y-m-d', strtotime($training->start_date)) }}</label></td>
                     </tr>
                     <tr>
                         <td class="text-center">结束时间</td>
-                        <td><label>{{ $training->end_date }}</label></td>
+                        <td><label>{{ date('Y-m-d', strtotime($training->end_date)) }}</label></td>
                     </tr>
                 </table>
             </div>

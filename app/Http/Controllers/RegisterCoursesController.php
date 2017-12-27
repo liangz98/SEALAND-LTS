@@ -24,10 +24,10 @@ class RegisterCoursesController extends Controller
 		$register_courses = RegisterCourse::paginate();
 		return view('register_courses.index', compact('register_courses'));
 	}
-
-    public function show(RegisterCourse $register_course)
-    {
-        return view('register_courses.show', compact('register_course'));
+    
+    public function show(RegisterCourse $register_course) {
+        $training = \DB::table('trainings')->where('id', $register_course->training_id)->first();
+        return view('register_courses.show', compact('register_course', 'training'));
     }
 
 	public function create(RegisterCourse $register_course, $trainingID)
@@ -40,8 +40,21 @@ class RegisterCoursesController extends Controller
 	}
     
     public function store(RegisterCourseRequest $request, RegisterCourse $registerCourse, User $user, FileUploadHandler $uploader) {
-        // dd($request->training_id);
+        // 检查同一课程是否已报名
+        $hasRegister = false;
+        $existRegisterCourses = \DB::table('register_courses')->where([['user_id', Auth::id()], ['training_id', $request->training_id], ['status', '<>', '02']])->get();
+        foreach ($existRegisterCourses as $existRegisterCourse) {
+            \DB::table('register_courses')
+              ->where('id', $existRegisterCourse->id)
+              ->update(['status' => '04']);
+        }
+    
+        $existConfRegisterCourses = \DB::table('register_courses')->where([['user_id', Auth::id()], ['training_id', $request->training_id], ['status', '==', '02']])->get();
+        if (!empty($existConfRegisterCourses)) {
+            return redirect()->route('trainings.index', $registerCourse->id)->with('message', '此课程已存在成功的申请!');
+        }
         
+        // 封装用户/会员ID
         $member = \DB::table('members')->where('user_id', Auth::id())->first();
         $registerCourse->user_id = Auth::id();
         if (!empty($member)) {

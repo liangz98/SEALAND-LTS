@@ -9256,6 +9256,11 @@ body {
   padding-top: 10px;
 }
 
+.register_courses-show-page {
+  padding: 80px 0px;
+  background: #EAEAED;
+}
+
 /* 登录/注册 */
 
 .login-body {
