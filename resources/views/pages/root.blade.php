@@ -118,7 +118,7 @@
 						<div class="col-md-4">
 							<div class="our_blog_item">
 								<div class="our_blog_img">
-									<img src="{{ $new->desc_bg }}" alt="">
+									<img src="/uploads/{{ $new->desc_bg }}" alt="">
 									<div class="b_date">
 										<h6>{{ date('M', strtotime($new->release_date)) }}</h6>
 										<h5>{{ date('d', strtotime($new->release_date)) }}</h5>
