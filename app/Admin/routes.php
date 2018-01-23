@@ -28,4 +28,6 @@ Route::group([
     $router->resource('trainingCategories', TrainingCategoryController::class);
     $router->resource('trainings', TrainingController::class);
     $router->resource('registerCourses', RegisterCourseController::class);
+    // 最新消息
+    $router->resource('news', NewsController::class);
 });

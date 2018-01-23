@@ -113,7 +113,31 @@
 				<h2>{{ trans('commons.from_out_blog') }}</h2>
 			</div>
 			<div class="row our_blog_inner">
-				<div class="col-md-4">
+				@if (count($news))
+					@foreach($news as $new)
+						<div class="col-md-4">
+							<div class="our_blog_item">
+								<div class="our_blog_img">
+									<img src="{{ $new->desc_bg }}" alt="">
+									<div class="b_date">
+										<h6>{{ date('M', strtotime($new->release_date)) }}</h6>
+										<h5>{{ date('d', strtotime($new->release_date)) }}</h5>
+									</div>
+								</div>
+								<div class="our_blog_content">
+									<a href="#">
+										<h4>{{ $new->subject }}</h4>
+									</a>
+									{{ $new->subject }}
+									{{--<p>据央广网报道，中央宣讲团成员、中央文献研究室主任冷溶23日早上到香港特区政府总部，为政府官员和高级公务员主讲中共十九大报告。中联办主任王志民等人出席。</p>--}}
+									{{--<h6><a href="#">Frank Martin</a><span>•</span><a href="#">9 Comments</a></h6>--}}
+								</div>
+							</div>
+						</div>
+					@endforeach
+				@endif
+
+				{{--<div class="col-md-4">
 					<div class="our_blog_item">
 						<div class="our_blog_img">
 							<img src="/images/news/news-default.jpg" alt="">
@@ -127,7 +151,7 @@
 								<h4>中央首次派宣讲团赴港宣讲十九大</h4>
 							</a>
 							<p>据央广网报道，中央宣讲团成员、中央文献研究室主任冷溶23日早上到香港特区政府总部，为政府官员和高级公务员主讲中共十九大报告。中联办主任王志民等人出席。</p>
-							{{--<h6><a href="#">Frank Martin</a><span>•</span><a href="#">9 Comments</a></h6>--}}
+							--}}{{--<h6><a href="#">Frank Martin</a><span>•</span><a href="#">9 Comments</a></h6>--}}{{--
 						</div>
 					</div>
 				</div>
@@ -145,7 +169,7 @@
 								<h4>置身宫殿？不，是新的桥底</h4>
 							</a>
 							<p>2017年对广州来说是有新气象的一年，《财富》全球论坛的盛会即将来到。在熟悉的城市里，街坊们不经意间发现，广州正变得越来越美。不少市民表示，广州的几座主要桥梁经过升级改造后，今年发生了巨变。每当华灯初上，桥下的风景让人惊叹。有市民说，感觉像是做梦，短短的时间里，这里竟变得如此美轮美奂。</p>
-							{{--<h6><a href="#">Frank Martin</a><span>•</span><a href="#">9 Comments</a></h6>--}}
+							--}}{{--<h6><a href="#">Frank Martin</a><span>•</span><a href="#">9 Comments</a></h6>--}}{{--
 						</div>
 					</div>
 				</div>
@@ -163,10 +187,10 @@
 								<h4>又上榜啦！<br class="b_title_br" />中国百强城市广州第三！</h4>
 							</a>
 							<p>中国百强城市排行榜是由华顿经济研究院编制发布的年度数据。评价指标包含经济和非经济（软经济）两大系列，数据来源于国家统计局，可以全面、科学地衡量一个城市的经济、社会、文化、生态等综合发展水平。</p>
-							{{--<h6><a href="#">Frank Martin</a><span>•</span><a href="#">9 Comments</a></h6>--}}
+							--}}{{--<h6><a href="#">Frank Martin</a><span>•</span><a href="#">9 Comments</a></h6>--}}{{--
 						</div>
 					</div>
-				</div>
+				</div>--}}
 			</div>
 		</div>
 	</section>

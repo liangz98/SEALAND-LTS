@@ -8,7 +8,8 @@ class PagesController extends Controller
 {
     public function root()
     {
-        return view('pages.root');
+        $news = \DB::table('news')->orderBy('release_date', 'desc')->limit(3)->get();
+        return view('pages.root', compact('news'));
     }
     
     public function permissionDenied()
