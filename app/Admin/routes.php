@@ -29,5 +29,5 @@ Route::group([
     $router->resource('trainings', TrainingController::class);
     $router->resource('registerCourses', RegisterCourseController::class);
     // 最新消息
-    $router->resource('news', NewsController::class);
+    $router->resource('snew', SnewController::class);
 });

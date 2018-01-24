@@ -4,9 +4,8 @@
 @section('description', $topic->excerpt)
 
 @section('content')
-
+<div class="container">
     <div class="row">
-
         <div class="col-lg-3 col-md-3 hidden-sm hidden-xs author-info">
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -71,4 +70,5 @@
             </div>
         </div>
     </div>
+</div>
 @stop

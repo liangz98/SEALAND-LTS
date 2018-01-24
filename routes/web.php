@@ -21,6 +21,7 @@ Route::get('/w_bootstrap', function () {
 Route::get('excel/export','ExcelController@export');
 
 Route::get('/', 'PagesController@root')->name('root');
+Route::get('/about', 'PagesController@about')->name('about');
 
 Auth::routes();
 
@@ -51,3 +52,7 @@ Route::resource('certifications', 'CertificationsController', ['only' => ['index
 Route::resource('renew_certifications', 'RenewCertificationsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('members', 'MembersController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('memberships', 'MembershipsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('snews', 'SnewsController', ['only' => ['index',
+    'create', 'store', 'update', 'edit', 'destroy']]);
+
+Route::get('/snews/{snew}', 'SnewsController@show')->name('snews.show');

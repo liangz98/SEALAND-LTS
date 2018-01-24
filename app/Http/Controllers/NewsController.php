@@ -14,9 +14,11 @@ class NewsController extends Controller
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
-	public function index()
+	public function index(News $news)
 	{
-		$news = News::paginate();
+		// $news = \DB::table('news')->orderBy('release_date', 'desc')
+        
+        $news = $news->paginate(20);
 		return view('news.index', compact('news'));
 	}
 

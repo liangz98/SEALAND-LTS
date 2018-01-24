@@ -5,6 +5,7 @@ use App\Admin\Extensions\Nav\Links;
 use App\Admin\Extensions\OpenMap;
 use App\Admin\Extensions\Popover;
 use App\Admin\Extensions\Simditor;
+use App\Admin\Extensions\WangEditor;
 use Encore\Admin\Grid\Column;
 use Encore\Admin\Form;
 
@@ -46,3 +47,5 @@ Column::extend('prependIcon', function ($value, $icon) { // 文本框显示图�
 Column::extend('expand', ExpandRow::class);     //列表页显示下拉层
 // Column::extend('openMap', OpenMap::class);  // 列表页地图插件
 Form::extend('simditor', Simditor::class);       // 扩展富文本编辑框(Simditor http://simditor.tower.im/)
+
+Form::extend('editor', WangEditor::class);       // 扩展富文本编辑框(wangEditor http://www.wangeditor.com/)

@@ -9,7 +9,7 @@
                 <h1>
                     <i class="glyphicon glyphicon-edit"></i> 报名培训
 
-                    <a href="{{ $trainingDefaultFile }}" class="btn btn-success pull-right">报表名下载</a>
+                    {{--<a href="{{ $trainingDefaultFile }}" class="btn btn-success pull-right">报表名下载</a>--}}
                 </h1>
             </div>
 

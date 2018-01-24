@@ -182,8 +182,11 @@ body {
 /* 用户 */
 @import "user_body";
 
-/* 用户 */
+/* 会员 */
 @import "member_body";
+
+/* 新闻 */
+@import "snews_body";
 
 /* 培训课程 */
 @import "trainings_body";

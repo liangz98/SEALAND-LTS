@@ -113,22 +113,22 @@
 				<h2>{{ trans('commons.from_out_blog') }}</h2>
 			</div>
 			<div class="row our_blog_inner">
-				@if (count($news))
-					@foreach($news as $new)
+				@if (count($snews))
+					@foreach($snews as $snew)
 						<div class="col-md-4">
 							<div class="our_blog_item">
 								<div class="our_blog_img">
-									<img src="/uploads/{{ $new->desc_bg }}" alt="">
+									<img src="/uploads/{{ $snew->excerpt_bg }}" alt="">
 									<div class="b_date">
-										<h6>{{ date('M', strtotime($new->release_date)) }}</h6>
-										<h5>{{ date('d', strtotime($new->release_date)) }}</h5>
+										<h6>{{ date('M', strtotime($snew->release_date)) }}</h6>
+										<h5>{{ date('d', strtotime($snew->release_date)) }}</h5>
 									</div>
 								</div>
 								<div class="our_blog_content">
 									<a href="#">
-										<h4>{{ $new->subject }}</h4>
+										<h4>{{ $snew->subject }}</h4>
 									</a>
-									{{ $new->subject }}
+									{!! $snew->excerpt !!}
 									{{--<p>据央广网报道，中央宣讲团成员、中央文献研究室主任冷溶23日早上到香港特区政府总部，为政府官员和高级公务员主讲中共十九大报告。中联办主任王志民等人出席。</p>--}}
 									{{--<h6><a href="#">Frank Martin</a><span>•</span><a href="#">9 Comments</a></h6>--}}
 								</div>

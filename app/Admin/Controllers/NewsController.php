@@ -101,9 +101,15 @@ class NewsController extends Controller
                  ->move('images/news/bg')->uniqueName();
             
             $form->simditor('body', '内容');
+    
+            // $states = [
+            //     'on'  => ['value' => '01', 'text' => '正常', 'color' => 'primary'],
+            //     'off' => ['value' => '02', 'text' => '禁用', 'color' => 'default'],
+            // ];
+            // $form->switch('status', '状态')->states($states)->default('01');
             
-            $form->display('created_at', 'Created At');
-            $form->display('updated_at', 'Updated At');
+            // $form->display('created_at', 'Created At');
+            // $form->display('updated_at', 'Updated At');
     
     
             $form->saving(function (Form $form) {
@@ -113,8 +119,6 @@ class NewsController extends Controller
                 if ($descBg == null) {
                     $form->model()->desc_bg = 'images/news/news-default.jpg';
                 }
-                
-                // dd($form->model()->desc_bg);
             });
         });
     }

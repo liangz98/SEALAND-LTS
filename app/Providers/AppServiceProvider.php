@@ -17,6 +17,7 @@ class AppServiceProvider extends ServiceProvider
 	{
 	    // 注册观察者
 		\App\Models\User::observe(\App\Observers\UserObserver::class);
+		\App\Models\Snew::observe(\App\Observers\SnewObserver::class);
 		\App\Models\Membership::observe(\App\Observers\MembershipObserver::class);
 		\App\Models\Member::observe(\App\Observers\MemberObserver::class);
 		\App\Models\RenewCertification::observe(\App\Observers\RenewCertificationObserver::class);

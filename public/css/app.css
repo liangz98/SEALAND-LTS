@@ -8480,6 +8480,14 @@ body {
 
 /* Topic Show Page */
 
+.topics-index-body,
+.topics-show-body,
+.topics-create-body {
+  padding: 80px 0px;
+  background: #EAEAED;
+  background-image: url("/images/training/introbg.jpg");
+}
+
 .simditor-body,
 .topic-body {
   font-size: 15px;
@@ -9221,7 +9229,7 @@ body {
   padding: 80px 0px;
 }
 
-/* 用户 */
+/* 会员 */
 
 .members-show-body {
   padding: 80px 0px;
@@ -9233,6 +9241,44 @@ body {
 
 .members-show-body .dl-horizontal dt {
   margin-bottom: 10px;
+}
+
+/* 新闻 */
+
+.snews-index-body,
+.snews-show-body {
+  padding: 80px 0px;
+  background: #EAEAED;
+  background-image: url("/images/training/introbg.jpg");
+}
+
+.snews-index-body .media-list .meta,
+.snews-show-body .media-list .meta {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+
+.snews-index-body .media-list .meta a,
+.snews-show-body .media-list .meta a {
+  color: #b3b3b3;
+}
+
+.snews-index-body .media-list .badge,
+.snews-show-body .media-list .badge {
+  background-color: #d8d8d8;
+}
+
+.snews-index-body .media-list hr,
+.snews-show-body .media-list hr {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border: 0;
+  border-top: 1px solid #dcebf5;
+}
+
+.snews-index-body .media-list span,
+.snews-show-body .media-list span {
+  color: #b3b3b3;
 }
 
 /* 培训课程 */

@@ -6,7 +6,7 @@
 
 return [
     'home' => '首页',
-    'news' => '新闻',
+    'news' => '最新消息',
     'training' => '培训课程',
     'product' => '产品',
     'about' => '关于',

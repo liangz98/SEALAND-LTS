@@ -8,8 +8,8 @@ class PagesController extends Controller
 {
     public function root()
     {
-        $news = \DB::table('news')->orderBy('release_date', 'desc')->limit(3)->get();
-        return view('pages.root', compact('news'));
+        $snews = \DB::table('snews')->orderBy('release_date', 'desc')->limit(3)->get();
+        return view('pages.root', compact('snews'));
     }
     
     public function permissionDenied()
@@ -20,5 +20,10 @@ class PagesController extends Controller
         }
         // 否则使用视图
         return view('pages.permission_denied');
+    }
+    
+    public function about()
+    {
+        return view('pages.about');
     }
 }

@@ -3,6 +3,7 @@
 @section('title', '话题列表')
 
 @section('content')
+<div class="container">
     <div class="row">
         <div class="col-lg-9 col-md-9 topic-list">
             <div class="panel panel-default">
@@ -27,5 +28,5 @@
             @include('topics._sidebar')
         </div>
     </div>
-
+</div>
 @endsection
