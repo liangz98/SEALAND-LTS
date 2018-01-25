@@ -27,7 +27,7 @@
                                 <span> • </span>
                                 <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
                                 <span class="timeago" title="最后活跃于">{{ $snew->created_at->diffForHumans() }}</span>
-                                <a class="pull-right" href="{{ route('topics.show', [$snew->id]) }}" >
+                                <a class="pull-right" href="{{ route('snews.show', [$snew->id]) }}" >
                                     <span class="badge"> {{ $snew->view_count }} </span>
                                 </a>
                             </div>
