@@ -42,6 +42,7 @@
                         <li><a href="/snews">@lang('commons.news')</a></li>
                         <li><a href="/trainings">@lang('commons.training')</a></li>
                         {{--<li><a href="#">@lang('commons.product')</a></li>--}}
+                        <li><a href="/topics">@lang('commons.topic')</a></li>
                         <li><a href="/about">@lang('commons.about')</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">

@@ -9281,6 +9281,18 @@ body {
   color: #b3b3b3;
 }
 
+.snews-index-body .panel,
+.snews-show-body .panel {
+  padding: 15px;
+}
+
+.snews-index-body .panel h1,
+.snews-show-body .panel h1 {
+  margin: 0.4em auto 0.6em;
+  font-size: 28px;
+  line-height: 38px;
+}
+
 /* 培训课程 */
 
 .trainings-index-body,

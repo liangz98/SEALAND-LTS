@@ -125,7 +125,7 @@
 									</div>
 								</div>
 								<div class="our_blog_content">
-									<a href="#">
+									<a href="{{ route('snews.show', [$snew->id]) }}">
 										<h4>{{ $snew->subject }}</h4>
 									</a>
 									{!! $snew->excerpt !!}

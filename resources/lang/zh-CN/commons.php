@@ -9,6 +9,7 @@ return [
     'news' => '最新消息',
     'training' => '培训课程',
     'product' => '产品',
+    'topic' => '话题',
     'about' => '关于',
     
     'call_us' => '联系我们',

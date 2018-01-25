@@ -9,6 +9,7 @@ return [
     'news' => 'NEWS',
     'training' => 'TRAINING',
     'product' => 'PRODUCT',
+    'topic' => 'TOPIC',
     'about' => 'ABOUT',
     
     'call_us' => 'Call us',
