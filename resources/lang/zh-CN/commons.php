@@ -10,7 +10,7 @@ return [
     'training' => '培训课程',
     'product' => '产品',
     'topic' => '话题',
-    'about' => '关于',
+    'about' => '关于公司',
     
     'call_us' => '联系我们',
     'contact_us' => '邮箱',

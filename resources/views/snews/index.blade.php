@@ -42,27 +42,6 @@
                     @endforeach
                 </ul>
 
-                {{--<table class="table table-condensed table-striped">--}}
-                    {{--<thead>--}}
-                        {{--<tr>--}}
-                            {{--<th>主题</th> <th>简介</th> <th>发布日期</th>--}}
-                        {{--</tr>--}}
-                    {{--</thead>--}}
-
-                    {{--<tbody>--}}
-                        {{--@foreach($snews as $snew)--}}
-                            {{--<tr>--}}
-                                {{--<td>--}}
-                                    {{--<a href="{{ route('snews.show', $snew->id) }}">--}}
-                                        {{--{{$snew->subject}}--}}
-                                    {{--</a>--}}
-                                {{--</td>--}}
-                                {{--<td>{!! $snew->excerpt !!}</td>--}}
-                                {{--<td>{{$snew->release_date}}</td>--}}
-                            {{--</tr>--}}
-                        {{--@endforeach--}}
-                    {{--</tbody>--}}
-                {{--</table>--}}
                 {!! $snews->render() !!}
             @else
                 <h3 class="text-center alert alert-info">Empty!</h3>

@@ -79,8 +79,14 @@ class MembershipController extends Controller
             $grid->id('ID')->sortable();
     
             $grid->column('member.name', '会员');
-            $grid->column('start_date', '发证日期')->format('YYYY-MM-DD');
-            $grid->column('expiry_date', '到期日期')->format('YYYY-MM-DD');
+            $grid->column('start_date', '发证日期')
+                 ->display(function ($time) {
+                     return date('Y-m-d', strtotime($time));
+                 });
+            $grid->column('expiry_date', '到期日')
+                 ->display(function ($time) {
+                     return date('Y-m-d', strtotime($time));
+                 });
             
             // $grid->created_at();
             // $grid->updated_at();
