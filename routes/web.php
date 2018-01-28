@@ -15,6 +15,8 @@
 //    return view('welcome');
 // });
 
+use App\Models\Training;
+
 Route::get('/w_bootstrap', function () {
     return view( 'welcome_bootstrap');
 });
@@ -56,3 +58,11 @@ Route::resource('snews', 'SnewsController', ['only' => ['index',
     'create', 'store', 'update', 'edit', 'destroy']]);
 
 Route::get('/snews/{snew}', 'SnewsController@show')->name('snews.show');
+
+// API
+Route::get('/api/members', function () {
+    return new \App\Http\Resources\MemberCollection(\App\Models\Member::find(1));
+});
+Route::get('/api/trainings', function () {
+    return new \App\Http\Resources\TrainingCollection(Training::all());
+});

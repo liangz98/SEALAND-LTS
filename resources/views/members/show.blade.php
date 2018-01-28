@@ -57,7 +57,7 @@
                             ])
                         @endif
                     @else
-                        <div class="empty-block">不是会员？马上 <a href="#">升级成为会员</a> </div>
+                        <div class="empty-block">不是会员？马上 <a href="{{ route('members.create') }}"><b>申请成为会员</b></a> </div>
                     @endif
                 </div>
             </div>

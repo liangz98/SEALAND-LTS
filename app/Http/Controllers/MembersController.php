@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Member;
+use Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MemberRequest;
@@ -31,9 +32,16 @@ class MembersController extends Controller
 		return view('members.create_and_edit', compact('member'));
 	}
 
-	public function store(MemberRequest $request)
+	public function store(MemberRequest $request, Member $member)
 	{
-		$member = Member::create($request->all());
+        $member->fill($request->all());
+        $member->user_id = Auth::id();
+        
+        if ($member->gender == null) {
+            $member->gender = 'M';
+        }
+        $member->save();
+        
 		return redirect()->route('members.show', $member->id)->with('message', 'Created successfully.');
 	}
 

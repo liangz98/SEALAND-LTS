@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\Member;
 use App\Models\Membership;
 
 use Encore\Admin\Form;
@@ -104,6 +105,14 @@ class MembershipController extends Controller
 
             $form->display('id', 'ID');
     
+            $form->select('member_id')->options(function ($id) {
+                
+                $member = Member::find($id);
+        
+                if ($member) {
+                    return [$member->id => $member->name];
+                }
+            })->ajax('/api/members');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });

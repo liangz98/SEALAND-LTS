@@ -12,6 +12,7 @@ use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
 use Encore\Admin\Widgets\Box;
 use Encore\Admin\Widgets\Table;
+use Illuminate\Http\Request;
 
 class MemberController extends Controller
 {

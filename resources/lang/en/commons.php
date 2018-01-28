@@ -10,6 +10,8 @@ return [
     'training' => 'TRAINING',
     'product' => 'PRODUCT',
     'topic' => 'TOPIC',
+    'member' => 'MEMBER',
+    'certification' => 'CERTIFICATION',
     'about' => 'ABOUT',
     
     'call_us' => 'Call us',

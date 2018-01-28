@@ -9231,15 +9231,18 @@ body {
 
 /* 会员 */
 
-.members-show-body {
+.members-show-body,
+.members-create-body {
   padding: 80px 0px;
 }
 
-.members-show-body .nav-tabs {
+.members-show-body .nav-tabs,
+.members-create-body .nav-tabs {
   margin-bottom: 20px;
 }
 
-.members-show-body .dl-horizontal dt {
+.members-show-body .dl-horizontal dt,
+.members-create-body .dl-horizontal dt {
   margin-bottom: 10px;
 }
 
@@ -9317,6 +9320,17 @@ body {
 .register_courses-show-page {
   padding: 80px 0px;
   background: #EAEAED;
+}
+
+/* 报名培训 */
+
+.renew_certifications-create-body {
+  padding: 80px 0px;
+}
+
+.renew_certifications-create-body h2,
+.renew_certifications-create-body p {
+  padding-bottom: 20px;
 }
 
 /* 关于 */

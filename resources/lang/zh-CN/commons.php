@@ -10,6 +10,8 @@ return [
     'training' => '培训课程',
     'product' => '产品',
     'topic' => '话题',
+    'member' => '会员',
+    'certification' => '认证续期',
     'about' => '关于公司',
     
     'call_us' => '联系我们',
