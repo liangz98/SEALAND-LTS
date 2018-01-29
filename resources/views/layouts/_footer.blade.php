@@ -71,7 +71,7 @@
                                 <div class="item_icon"><i class="fa fa-envelope-o"></i></div>
                                 <div class="widget_ab_item_text">
                                     <h6 class="text-white">Email Address :</h6>
-                                    <p><a href="mailto:celia@sealandconsulting.com">celia@sealandconsulting.com</a></p>
+                                    <p><a href="mailto:celia@sealandconsulting.com">info@sealandconsulting.com</a></p>
                                 </div>
                             </div>
                         </div>
