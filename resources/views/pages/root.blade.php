@@ -26,7 +26,7 @@
 
 						<div class="tp-caption slider_btn" data-x="['left','left','left','center']" data-y="['top','top','top','top']" data-hoffset="['0','0','0','0']" data-voffset="['470','470','470','335']" data-fontsize="['16','16','16','16']" data-lineheight="['26','26','26','26']" data-width="none" data-height="none"
 							 data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":150,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-							 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a class="quote_btn" href="#">KNOW MORE <i class="fa fa-angle-right"></i></a></div>
+							 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a class="quote_btn" href="/about">KNOW MORE <i class="fa fa-angle-right"></i></a></div>
 
 						<div class="tp-caption ContentZoom-SmallIcon tp-resizeme rs-parallaxlevel-0" data-x="['left','left','left','center']" data-y="['center','center','center','center']" data-hoffset="['-70','0','0','-25']" data-voffset="['0','0','0','0']" data-width="none" data-height="none"
 							 data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;" data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
@@ -56,7 +56,7 @@
 
 						<div class="tp-caption slider_btn" data-x="['left','left','left','center']" data-y="['top','top','top','top']" data-hoffset="['0','0','0','0']" data-voffset="['470','470','470','335']" data-fontsize="['16','16','16','16']" data-lineheight="['26','26','26','26']"
 							 data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":150,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-							 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a class="quote_btn" href="#">KNOW MORE <i class="fa fa-angle-right"></i></a></div>
+							 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a class="quote_btn" href="/about">KNOW MORE <i class="fa fa-angle-right"></i></a></div>
 
 						<div class="tp-caption ContentZoom-SmallIcon tp-resizeme rs-parallaxlevel-0" data-x="['left','left','left','center']" data-y="['center','center','center','center']" data-hoffset="['-70','0','0','-25']" data-voffset="['0','0','0','0']" data-width="none" data-height="none"
 							 data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;" data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
@@ -86,7 +86,7 @@
 
 						<div class="tp-caption slider_btn" data-x="['left','left','left','center']" data-y="['top','top','top','top']" data-hoffset="['0','0','0','0']" data-voffset="['470','470','470','335']" data-fontsize="['16','16','16','16']" data-lineheight="['26','26','26','26']"
 							 data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":150,"ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-							 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a class="quote_btn" href="#">详情 <i class="fa fa-angle-right"></i></a></div>
+							 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"><a class="quote_btn" href="/about">详情 <i class="fa fa-angle-right"></i></a></div>
 
 						<div class="tp-caption ContentZoom-SmallIcon tp-resizeme rs-parallaxlevel-0" data-x="['left','left','left','center']" data-y="['center','center','center','center']" data-hoffset="['-70','0','0','-25']" data-voffset="['0','0','0','0']" data-width="none" data-height="none"
 							 data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;" data-style_hover="c:rgba(111, 124, 130, 1.00);cursor:pointer;" data-transform_in="opacity:0;s:500;e:Power1.easeInOut;"
@@ -198,6 +198,7 @@
 
 
 	<!--================pricing Area =================-->
+	{{--
 	<section class="pricing">
 		<div class="container">
 			<div class="row section-intro">
@@ -216,14 +217,14 @@
 								<h3 class="plan-title">初级</h3>
 								<p class="plan-price"><sup>￥</sup>1080</p>
 								<p class="price-month">半年</p>
-								{{--<p class="price-meta">会员时长180天</p>--}}
+								--}}{{--<p class="price-meta">会员时长180天</p>--}}{{--
 							</div>
 							<div class="bottom-part">
 								<ul class="features">
 									<li>会员时长 <strong>180</strong> 天</li>
 									<li>基础服务</li>
-									{{--<li><strong>5</strong> Databases</li>--}}
-									{{--<li><strong>30</strong> Email Accounts</li>--}}
+									--}}{{--<li><strong>5</strong> Databases</li>--}}{{--
+									--}}{{--<li><strong>30</strong> Email Accounts</li>--}}{{--
 								</ul>
 								<a href="#" class="btn btn-primary btn-lg" href="">选择</a>
 							</div>
@@ -236,15 +237,15 @@
 								<h3 class="plan-title">标准</h3>
 								<p class="plan-price"><sup>￥</sup>1999</p>
 								<p class="price-month">一年</p>
-								{{--<p class="price-meta">会员时长 365 天</p>--}}
+								--}}{{--<p class="price-meta">会员时长 365 天</p>--}}{{--
 							</div>
 
 							<div class="bottom-part">
 								<ul class="features">
 									<li>会员时长 <strong>365</strong> 天</li>
 									<li>基础服务</li>
-									{{--<li><strong>7</strong> Databases</li>--}}
-									{{--<li><strong>40</strong> Email Accounts</li>--}}
+									--}}{{--<li><strong>7</strong> Databases</li>--}}{{--
+									--}}{{--<li><strong>40</strong> Email Accounts</li>--}}{{--
 								</ul>
 								<a href="#" class="btn btn-primary btn-lg" href="">选择</a>
 							</div>
@@ -257,15 +258,15 @@
 								<h3 class="plan-title">进阶</h3>
 								<p class="plan-price"><sup>￥</sup>3688</p>
 								<p class="price-month">附赠一个月</p>
-								{{--<p class="price-meta">会员时长 760 天</p>--}}
+								--}}{{--<p class="price-meta">会员时长 760 天</p>--}}{{--
 							</div>
 
 							<div class="bottom-part">
 								<ul class="features">
 									<li>会员时长 <strong>760</strong> 天</li>
 									<li>免费赠送 <strong>30</strong> 天</li>
-									{{--<li><strong>15</strong> Databases</li>--}}
-									{{--<li><strong>60</strong> Email Accounts</li>--}}
+									--}}{{--<li><strong>15</strong> Databases</li>--}}{{--
+									--}}{{--<li><strong>60</strong> Email Accounts</li>--}}{{--
 								</ul>
 								<a href="#" class="btn btn-primary btn-lg" href="">选择</a>
 							</div>
@@ -278,7 +279,7 @@
 								<h3 class="plan-title">高级</h3>
 								<p class="plan-price"><sup>￥</sup>5399</p>
 								<p class="price-month">附赠三个月</p>
-								{{--<p class="price-meta">会员时长 1185 天</p>--}}
+								--}}{{--<p class="price-meta">会员时长 1185 天</p>--}}{{--
 
 							</div>
 
@@ -286,8 +287,8 @@
 								<ul class="features">
 									<li>会员时长 <strong>1185</strong> 天</li>
 									<li>免费赠送 <strong>90</strong> 天</li>
-									{{--<li><strong>25</strong> Databases</li>--}}
-									{{--<li><strong>100</strong> Email Accounts</li>--}}
+									--}}{{--<li><strong>25</strong> Databases</li>--}}{{--
+									--}}{{--<li><strong>100</strong> Email Accounts</li>--}}{{--
 								</ul>
 								<a href="#" class="btn btn-primary btn-lg" href="">选择</a>
 							</div>
@@ -296,7 +297,7 @@
 				</div> <!-- /pricing-tables -->
 			</div> <!-- /pricing-content -->
 		</div>
-	</section>
+	</section>--}}
 	<!--================End pricing Area =================-->
 @stop
 

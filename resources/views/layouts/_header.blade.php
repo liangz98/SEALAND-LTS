@@ -6,7 +6,7 @@
                     <h4><i class="fa fa-phone" aria-hidden="true"></i> {{ trans('commons.call_us') }}: +86-020-81933883</h4>
                 </div>
                 <div class="header_c_text">
-                    <h4><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:#">{{ trans('commons.contact_us') }}: celia@sealandconsulting.com</a></h4>
+                    <h4><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:#">{{ trans('commons.contact_us') }}: info@sealandconsulting.com</a></h4>
                 </div>
             </div>
             <div class="pull-right hidden-xs">
