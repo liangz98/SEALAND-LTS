@@ -9232,16 +9232,19 @@ body {
 /* 会员 */
 
 .members-show-body,
+.members-index-body,
 .members-create-body {
   padding: 80px 0px;
 }
 
 .members-show-body .nav-tabs,
+.members-index-body .nav-tabs,
 .members-create-body .nav-tabs {
   margin-bottom: 20px;
 }
 
 .members-show-body .dl-horizontal dt,
+.members-index-body .dl-horizontal dt,
 .members-create-body .dl-horizontal dt {
   margin-bottom: 10px;
 }
