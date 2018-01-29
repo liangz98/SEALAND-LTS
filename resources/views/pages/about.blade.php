@@ -64,6 +64,7 @@
 						</div>
 					</div>
 				</div>
+				{{--
 				<div class="single-counter-2 text-center">
 					<div class="single-counter-wrapper">
 						<div class="counter-2-icon">
@@ -75,6 +76,7 @@
 						</div>
 					</div>
 				</div>
+				--}}
 				<div class="single-counter-2 text-center">
 					<div class="single-counter-wrapper">
 						<div class="counter-2-icon">
