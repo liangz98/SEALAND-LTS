@@ -56,7 +56,7 @@
                                 <div class="widget_ab_item_text">
                                     <h6 class="text-white">Location</h6>
                                     <p>
-                                        广州市越秀区北京路..
+                                        广州市越秀区北京路..!
                                     </p>
                                 </div>
                             </div>
