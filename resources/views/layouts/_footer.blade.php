@@ -84,6 +84,9 @@
         <div class="container">
             <h4>Copyright &copy; 2017.<a href="/">Sea Land Consulting Services Limited. </a> All rights reserved.</h4>
         </div>
+        <div class="container">
+            <h4>ICP证：<a href="http://www.miitbeian.gov.cn">粤ICP备14011198号-1</a></h4>
+        </div>
     </div>
 </footer>
 <!--================End Footer Area =================-->
