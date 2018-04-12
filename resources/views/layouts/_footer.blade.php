@@ -19,7 +19,7 @@
                         </ul>
                     </aside>
                 </div>
-                <div class="col-md-4 col-xs-6">
+                <div class="col-md-3 col-xs-6">
                     <aside class="f_widget link_widget">
                         <div class="f_title">
                             <h3>{{ trans('commons.quick_link') }}</h3>
@@ -45,7 +45,7 @@
                         </ul>
                     </aside>
                 </div>--}}
-                <div class="col-md-4 col-xs-6">
+                <div class="col-md-5 col-xs-6">
                     <aside class="f_widget info_widget">
                         <div class="f_title">
                             <h3>{{ trans('commons.call_us') }}</h3>
