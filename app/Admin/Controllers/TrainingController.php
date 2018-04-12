@@ -146,7 +146,7 @@ class TrainingController extends Controller
                 'on'  => ['value' => '01', 'text' => '正常', 'color' => 'primary'],
                 'off' => ['value' => '02', 'text' => '禁用', 'color' => 'default'],
             ];
-            $form->switch('status', '状态')->states($states);
+            $form->switch('status', '状态')->states($states)->default('01');
     
             // $form->display('created_at', 'Created At');
             // $form->display('updated_at', 'Updated At');
