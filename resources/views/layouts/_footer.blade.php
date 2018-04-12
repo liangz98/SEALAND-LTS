@@ -61,6 +61,13 @@
                                         广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.<br>
                                         <abbr title="Phone">P:</abbr> (123) 456-7890
                                     </address>
+
+                                    <address>
+                                        <strong>Twitter, Inc.</strong><br>
+                                        广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.<br>
+                                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                                    </address>
+
                                     <p>
                                         广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.
                                     </p>
