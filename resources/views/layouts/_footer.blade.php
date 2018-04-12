@@ -32,7 +32,7 @@
                         </ul>
                     </aside>
                 </div>
-                <div class="col-md-3 col-xs-6">
+                {{--<div class="col-md-3 col-xs-6">
                     <aside class="f_widget service_widget">
                         <div class="f_title">
                             <h3>{{ trans('commons.services') }}</h3>
@@ -44,8 +44,8 @@
                             <li><a href="#">服务项目</a></li>
                         </ul>
                     </aside>
-                </div>
-                <div class="col-md-3 col-xs-6">
+                </div>--}}
+                <div class="col-md-6 col-xs-6">
                     <aside class="f_widget info_widget">
                         <div class="f_title">
                             <h3>{{ trans('commons.call_us') }}</h3>
