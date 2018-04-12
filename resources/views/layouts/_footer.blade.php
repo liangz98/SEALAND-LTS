@@ -56,7 +56,7 @@
                                 <div class="widget_ab_item_text">
                                     <h6 class="text-white">Location</h6>
                                     <p>
-                                        广州市越秀区北京路.
+                                        广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.
                                     </p>
                                 </div>
                             </div>
@@ -65,6 +65,7 @@
                                 <div class="widget_ab_item_text">
                                     <h6 class="text-white">Phone :</h6>
                                     <p><a href="tel:+86-020-81933883">+86-020-81933883</a></p>
+                                    <p><a href="tel:+86-020-81935678">+86-020-81935678</a></p>
                                 </div>
                             </div>
                             <div class="widget_ab_item m-top-30">
