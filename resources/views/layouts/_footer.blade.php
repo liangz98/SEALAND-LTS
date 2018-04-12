@@ -56,23 +56,23 @@
                                 <div class="widget_ab_item_text">
                                     <h6 class="text-white">Location</h6>
 
-                                    <address>
+                                    <address class="text-white">
                                         <strong>香港</strong><br>
-                                        广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.<br>
-                                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                                        香港屯门海荣路22号屯门中央广场12楼1219室.<br>
+                                        <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+852-22747182" class="text-white">+852-22747182</a><br>
                                     </address>
 
-                                    <address>
+                                    <address class="text-white">
                                         <strong>北京</strong><br>
-                                        广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.<br>
-                                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                                        北京市丰台区右安门外大街99号华商科技大厦526室.<br>
+                                        <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-010-63357814" class="text-white">+86-010-63357814</a><br>
                                     </address>
 
                                     <address class="text-white">
                                         <strong>广州</strong><br>
                                         广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.<br>
-                                        <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-020-81933883">+86-020-81933883</a><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+86-020-81935678">+86-020-81935678</a>
+                                        <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-020-81933883" class="text-white">+86-020-81933883</a><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+86-020-81935678" class="text-white">+86-020-81935678</a>
                                     </address>
 
                                     {{--<p>
