@@ -68,11 +68,11 @@
                                         <abbr title="Phone">P:</abbr> (123) 456-7890
                                     </address>
 
-                                    <address>
+                                    <address class="text-white">
                                         <strong>广州</strong><br>
                                         广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.<br>
-                                        <abbr title="Phone">Phone:</abbr><a href="tel:+86-020-81933883">+86-020-81933883</a><br>
-                                        &nbsp;&nbsp;&nbsp;<a href="tel:+86-020-81935678">+86-020-81935678</a>
+                                        <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-020-81933883">+86-020-81933883</a><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+86-020-81935678">+86-020-81935678</a>
                                     </address>
 
                                     {{--<p>
