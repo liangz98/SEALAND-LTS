@@ -3,7 +3,7 @@
     <div class="footer_widget_area">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-xs-6">
+                <div class="col-md-4 col-xs-6">
                     <aside class="f_widget about_widget">
                         <div class="f_title">
                             <img src="/images/logo_trans.png" width="32px" height="32px" alt="">
@@ -19,7 +19,7 @@
                         </ul>
                     </aside>
                 </div>
-                <div class="col-md-3 col-xs-6">
+                <div class="col-md-4 col-xs-6">
                     <aside class="f_widget link_widget">
                         <div class="f_title">
                             <h3>{{ trans('commons.quick_link') }}</h3>
@@ -45,7 +45,7 @@
                         </ul>
                     </aside>
                 </div>--}}
-                <div class="col-md-6 col-xs-6">
+                <div class="col-md-4 col-xs-6">
                     <aside class="f_widget info_widget">
                         <div class="f_title">
                             <h3>{{ trans('commons.call_us') }}</h3>
@@ -86,7 +86,7 @@
                             <div class="widget_ab_item m-top-30">
                                 <div class="item_icon"><i class="fa fa-envelope-o"></i></div>
                                 <div class="widget_ab_item_text">
-                                    <h6 class="text-white">Email Address :</h6>
+                                    <h6 class="text-muted">Email Address :</h6>
                                     <p><a href="mailto:celia@sealandconsulting.com">info@sealandconsulting.com</a></p>
                                 </div>
                             </div>
