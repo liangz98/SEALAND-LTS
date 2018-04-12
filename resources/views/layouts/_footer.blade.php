@@ -57,22 +57,29 @@
                                     <h6 class="text-white">Location</h6>
 
                                     <address>
-                                        <strong>Twitter, Inc.</strong><br>
+                                        <strong>香港</strong><br>
                                         广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.<br>
                                         <abbr title="Phone">P:</abbr> (123) 456-7890
                                     </address>
 
                                     <address>
-                                        <strong>Twitter, Inc.</strong><br>
+                                        <strong>北京</strong><br>
                                         广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.<br>
                                         <abbr title="Phone">P:</abbr> (123) 456-7890
                                     </address>
 
-                                    <p>
+                                    <address>
+                                        <strong>广州</strong><br>
+                                        广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.<br>
+                                        <abbr title="Phone">Phone:</abbr><a href="tel:+86-020-81933883">+86-020-81933883</a><br>
+                                        &nbsp;&nbsp;&nbsp;<a href="tel:+86-020-81935678">+86-020-81935678</a>
+                                    </address>
+
+                                    {{--<p>
                                         广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.
                                     </p>
                                     <p><a href="tel:+86-020-81933883">+86-020-81933883</a></p>
-                                    <p><a href="tel:+86-020-81935678">+86-020-81935678</a></p>
+                                    <p><a href="tel:+86-020-81935678">+86-020-81935678</a></p>--}}
                                 </div>
                             </div>
                             <div class="widget_ab_item m-top-30">
