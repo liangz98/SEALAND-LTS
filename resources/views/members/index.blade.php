@@ -6,7 +6,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h1>
-                    <i class="glyphicon glyphicon-align-justify"></i> Member
+                    <i class="glyphicon glyphicon-align-justify"></i> {{ trans('commons.member') }}
                     <a class="btn btn-success pull-right" href="{{ route('members.create') }}"><i class="glyphicon glyphicon-plus"></i> Create</a>
                 </h1>
             </div>

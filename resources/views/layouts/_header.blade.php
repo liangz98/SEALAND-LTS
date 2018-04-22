@@ -81,8 +81,8 @@
                         {{--</li>--}}
 
                         @guest
-                            <li><a href="{{ route('login') }}">登录</a></li>
-                            <li><a href="{{ route('register') }}">注册</a></li>
+                            <li><a href="{{ route('login') }}">{{ trans('auth.login') }}</a></li>
+                            <li><a href="{{ route('register') }}">{{ trans('auth.register') }}</a></li>
                         @else
                             <li>
                                 <a href="{{ route('topics.create') }}">

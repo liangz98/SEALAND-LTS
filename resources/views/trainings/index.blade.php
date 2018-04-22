@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '培训课程')
+@section('title', trans('commons.training'))
 
 @section('styles')
 
@@ -10,7 +10,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h1>
-                <i class="glyphicon glyphicon-align-justify"></i> Training
+                <i class="glyphicon glyphicon-align-justify"></i> {{ trans('commons.training') }}
                 {{--<a class="btn btn-success pull-right" href="{{ route('trainings.create') }}"><i class="glyphicon glyphicon-plus"></i> Create</a>--}}
             </h1>
         </div>

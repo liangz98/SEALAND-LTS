@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '最新消息')
+@section('title', trans('commons.news'))
 
 @section('styles')
 
@@ -10,7 +10,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h1>
-                <i class="glyphicon glyphicon-align-justify"></i> 最新消息
+                <i class="glyphicon glyphicon-align-justify"></i> {{ trans('commons.news') }}
             </h1>
         </div>
 

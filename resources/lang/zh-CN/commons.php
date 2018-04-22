@@ -12,7 +12,7 @@ return [
     'topic' => '话题',
     'member' => '会员',
     'certification' => '认证续期',
-    'about' => '关于公司',
+    'about' => '公司简介',
     
     'call_us' => '联系我们',
     'contact_us' => '邮箱',

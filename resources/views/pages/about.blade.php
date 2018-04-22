@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', '公司简介')
+@section('title', trans('commons.about'))
 
 @section('styles')
 
@@ -12,7 +12,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="welcome-section-content">
-						<h4 class="wc-heading text-center">公司简介</h4>
+						<h4 class="wc-heading text-center">{{ trans('commons.about') }}</h4>
 						<div class="row">
 							@if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
 							<div class="col-sm-10 col-md-10 col-md-offset-1">
