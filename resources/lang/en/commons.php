@@ -28,4 +28,8 @@ return [
     'terms_conditions' => 'TERMS & CONDITIONS',
     
     'services' => 'Services',
+    
+    /* 语言 */
+    'Chinese' => '中文',
+    'English' => 'English',
 ];

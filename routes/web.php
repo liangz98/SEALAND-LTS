@@ -27,6 +27,10 @@ Route::get('/about', 'PagesController@about')->name('about');
 
 Auth::routes();
 
+// 切换本地语言
+Route::get('lang/{locale}', ['as'=>'lang.change', 'uses'=>'LanguageController@setLocale']);
+
+
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 Route::resource('projects', 'ProjectsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);

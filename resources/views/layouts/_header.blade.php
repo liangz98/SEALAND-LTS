@@ -11,11 +11,21 @@
             </div>
             <div class="pull-right hidden-xs">
                 <ul class="list-inline">
-                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                    <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                    @foreach (Config::get('app.locales') as $lang => $language)
+                        @if ($lang != App::getLocale())
+                            <li><a href="{{ route('lang.change', $lang) }}"><img src="/images/language/{{$lang}}.png" style="margin-top: -5px;" /> {{ trans('commons.'.$language) }}</a></li>
+                        @endif
+                    @endforeach
                 </ul>
             </div>
+
+            {{--<div class="pull-right hidden-xs">--}}
+                {{--<ul class="list-inline">--}}
+                    {{--<li><a href=""><i class="fa fa-facebook"></i></a></li>--}}
+                    {{--<li><a href=""><i class="fa fa-twitter"></i></a></li>--}}
+                    {{--<li><a href=""><i class="fa fa-linkedin"></i></a></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
         </div>
     </div>
     <div class="main_menu_area">
