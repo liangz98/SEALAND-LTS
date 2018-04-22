@@ -8,8 +8,21 @@
                 <div class="header_c_text">
                     <h4><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:#">{{ trans('commons.contact_us') }}: info@sealandconsulting.com</a></h4>
                 </div>
+                <div class="header_c_text visible-xs-block">
+                    <ul class="list-inline">
+                    @foreach (Config::get('app.locales') as $lang => $language)
+                        @if ($lang != App::getLocale())
+                            <li>
+                                <a href="{{ route('lang.change', $lang) }}" style="font-size: 16px; color: #999999;">
+                                    <img src="/images/language/{{$lang}}.png" style="margin-top: -5px;" /> {{ trans('commons.'.$language) }}
+                                </a>
+                            </li>
+                        @endif
+                    @endforeach
+                    </ul>
+                </div>
             </div>
-            <div class="pull-right">
+            <div class="pull-right hidden-xs hidden-sm">
                 <ul class="list-inline">
                     @foreach (Config::get('app.locales') as $lang => $language)
                         @if ($lang != App::getLocale())
