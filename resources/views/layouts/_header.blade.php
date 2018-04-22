@@ -9,7 +9,7 @@
                     <h4><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:#">{{ trans('commons.contact_us') }}: info@sealandconsulting.com</a></h4>
                 </div>
             </div>
-            <div class="pull-right hidden-xs">
+            <div class="pull-right">
                 <ul class="list-inline">
                     @foreach (Config::get('app.locales') as $lang => $language)
                         @if ($lang != App::getLocale())

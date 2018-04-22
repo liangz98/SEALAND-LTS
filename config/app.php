@@ -80,8 +80,8 @@ return [
 
     'locales' => ['en-US' => 'English', 'zh-CN' => 'Chinese'],
 
-    // 'locale' => 'zh-CN',
-    'locale' => 'en-US',
+    'locale' => 'zh-CN',
+    // 'locale' => 'en-US',
 
     /*
     |--------------------------------------------------------------------------
