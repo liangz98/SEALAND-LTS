@@ -11,7 +11,15 @@
 
             <div class="panel-body">
                 <h1 class="text-center">
-                    {{ $snew->subject }}
+                    @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
+                        {{ $snew->subject }}
+                    @else
+                        @if( $snew->subject_en != null &&  $snew->subject_en != '')
+                            {{ $snew->subject_en }}
+                        @else
+                            {{ $snew->subject }}
+                        @endif
+                    @endif
                 </h1>
 
                 <div class="article-meta text-center">
@@ -22,7 +30,15 @@
                 </div>
 
                 <div class="topic-body">
-                    {!! $snew->body !!}
+                    @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
+                        {!! $snew->body !!}
+                    @else
+                        @if( $snew->body_en != null &&  $snew->body_en != '')
+                            {!! $snew->body_en !!}
+                        @else
+                            {!! $snew->body !!}
+                        @endif
+                    @endif
                 </div>
             </div>
         </div>

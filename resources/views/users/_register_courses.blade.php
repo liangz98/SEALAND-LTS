@@ -5,12 +5,15 @@
     <tr>
         <td>
             <a href="{{ route('register_courses.show', $registerCourse->id) }}">
-                {{ $registerCourse->training->name }}
+                {{--{{ $registerCourse->training->name }}--}}
             </a>
         </td>
-        <td>{{ date('Y-m-d', strtotime($registerCourse->training->start_date)) }}</td>
-        <td>{{ date('Y-m-d', strtotime($registerCourse->training->end_date)) }}</td>
-        {{--<td><a href="{{ $registerCourse->application_form }}">报名表</a></td>--}}
+        <td>
+            {{--{{ date('Y-m-d', strtotime($registerCourse->training->start_date)) }}--}}
+        </td>
+        <td>
+            {{--{{ date('Y-m-d', strtotime($registerCourse->training->end_date)) }}--}}
+        </td>
         <td>{{ trans('dataDict.register_course_status.'.$registerCourse->status) }}</td>
     </tr>
     @endforeach

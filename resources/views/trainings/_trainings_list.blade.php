@@ -18,13 +18,31 @@
 
 				<td>
 					<a href="{{ route('trainings.show', $training->id) }}">
-						{{$training->name}}
+						@if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
+							{{$training->name}}
+						@else
+							@if( $training->en_name != null &&  $training->en_name != '')
+								{{$training->en_name}}
+							@else
+								{{$training->name}}
+							@endif
+						@endif
 					</a>
 				</td>
 
 				<td class="hidden-xs">{{$training->number}}</td>
 				<td><strong>{{ $training->total - $training->apply_count }}</strong></td>
-				<td class="hidden-xs">{{ str_limit( $training->location, 20) }}</td>
+				<td class="hidden-xs">
+					@if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
+						{{ str_limit( $training->location, 20) }}
+					@else
+						@if( $training->en_location != null &&  $training->en_location != '')
+							{{ str_limit( $training->en_location, 20) }}
+						@else
+							{{ str_limit( $training->location, 20) }}
+						@endif
+					@endif
+				</td>
 				<td>{{ date('Y-m-d', strtotime($training->start_date)) }}</td>
 				<td class="hidden-xs">{{ date('Y-m-d', strtotime($training->end_date)) }}</td>
 

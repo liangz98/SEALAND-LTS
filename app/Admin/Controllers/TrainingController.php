@@ -119,34 +119,43 @@ class TrainingController extends Controller
     protected function form()
     {
         return Admin::form(Training::class, function (Form $form) {
-
-            // $form->display('id', 'ID');
     
-            $form->text('name', '名称');
-            // $form->text('en_name', '名称(英文)');
+            $form->tab('中文', function (Form $form) {
+                // $form->display('id', 'ID');
+        
+                $form->text('name', '名称');
+                // $form->text('en_name', '名称(英文)');
+        
+                $form->select('category_id', '分类')->options(TrainingCategory::all()->pluck('name', 'id'));
+                $form->text('number', '课程编号');
+                $form->text('level', '课程级别');
+                $form->textarea('content', '描述');
+                $form->text('location', '培训地点');
+                $form->text('address', '详细地址');
+        
+                // 数字输入框
+                $form->number('total', '总人数');
+                // 数字输入框
+                $form->number('apply_count', '已报名人数');
+        
+                $form->date('start_date', '开始时间')->format('YYYY-MM-DD');
+                $form->date('end_date', '结束时间');
+        
+        
+                $states = [
+                    'on'  => ['value' => '01', 'text' => '正常', 'color' => 'primary'],
+                    'off' => ['value' => '02', 'text' => '禁用', 'color' => 'default'],
+                ];
+                $form->switch('status', '状态')->states($states)->default('01');
     
-            $form->select('category_id', '分类')->options(TrainingCategory::all()->pluck('name', 'id'));
-            $form->text('number', '课程编号');
-            $form->text('level', '课程级别');
-            $form->textarea('content', '描述');
-            $form->textarea('en_content', '描述(英文)');
-            $form->text('location', '培训地点');
-            $form->text('address', '详细地址');
-    
-            // 数字输入框
-            $form->number('total', '总人数');
-            // 数字输入框
-            $form->number('apply_count', '已报名人数');
-    
-            $form->date('start_date', '开始时间')->format('YYYY-MM-DD');
-            $form->date('end_date', '结束时间');
-    
-    
-            $states = [
-                'on'  => ['value' => '01', 'text' => '正常', 'color' => 'primary'],
-                'off' => ['value' => '02', 'text' => '禁用', 'color' => 'default'],
-            ];
-            $form->switch('status', '状态')->states($states)->default('01');
+            })->tab("英文", function (Form $form) {
+                $form->text('en_name', '名称(Name)');
+                $form->text('en_level', '课程级别(Level)');
+                $form->textarea('en_content', '描述(英文)');
+                $form->text('en_location', 'Location');
+                $form->text('en_address', 'Address');
+                
+            });
     
             // $form->display('created_at', 'Created At');
             // $form->display('updated_at', 'Updated At');

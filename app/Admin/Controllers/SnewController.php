@@ -80,6 +80,8 @@ class SnewController extends Controller
             
             $grid->created_at();
             // $grid->updated_at();
+    
+            $grid->model()->orderBy('created_at', 'desc');
         });
     }
 
@@ -91,16 +93,25 @@ class SnewController extends Controller
     protected function form()
     {
         return Admin::form(Snew::class, function (Form $form) {
+            $form->tab('中文', function (Form $form) {
+                $form->display('id', 'ID');
+    
+                $form->text('subject', '标题');
+    
+                
+    
+                $form->simditor('excerpt', '简介');
+                
+                $form->image('excerpt_bg', '简介底图')
+                     ->move('images/news/bg')->uniqueName();
+    
+                $form->simditor('body', '内容');
+            })->tab("英文", function (Form $form) {
+                $form->text('subject_en', '标题(英文)');
+                $form->simditor('excerpt_en', '简介(英文)');
+                $form->simditor('body_en', '内容');
+            });
 
-            $form->display('id', 'ID');
-    
-            $form->text('subject', '标题');
-    
-            $form->simditor('excerpt', '简介');
-            $form->image('excerpt_bg', '简介底图')
-                 ->move('images/news/bg')->uniqueName();
-    
-            $form->simditor('body', '内容');
 
             // $form->display('created_at', 'Created At');
             // $form->display('updated_at', 'Updated At');

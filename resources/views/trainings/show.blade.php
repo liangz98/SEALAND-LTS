@@ -25,7 +25,19 @@
                 <table class="table table-hover">
                     <tr>
                         <td class="text-center">课程</td>
-                        <td><label>{{ $training->name }}</label></td>
+                        <td>
+                            <label>
+                                @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
+                                    {{$training->name}}
+                                @else
+                                    @if( $training->en_name != null &&  $training->en_name != '')
+                                        {{$training->en_name}}
+                                    @else
+                                        {{$training->name}}
+                                    @endif
+                                @endif
+                            </label>
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-center">课程编号</td>
@@ -33,19 +45,67 @@
                     </tr>
                     <tr>
                         <td class="text-center">课程级别</td>
-                        <td><label>{{ $training->level }}</label></td>
+                        <td>
+                            <label>
+                                @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
+                                    {{$training->level}}
+                                @else
+                                    @if( $training->en_level != null &&  $training->en_level != '')
+                                        {{$training->en_level}}
+                                    @else
+                                        {{$training->level}}
+                                    @endif
+                                @endif
+                            </label>
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-center">课程内容</td>
-                        <td><label>{{ $training->content }}</label></td>
+                        <td>
+                            <label>
+                                @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
+                                    {{$training->content}}
+                                @else
+                                    @if( $training->en_content != null &&  $training->en_content != '')
+                                        {{$training->en_content}}
+                                    @else
+                                        {{$training->content}}
+                                    @endif
+                                @endif
+                            </label>
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-center">培训地点</td>
-                        <td><label for="">{{ $training->location }}</label></td>
+                        <td>
+                            <label>
+                                @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
+                                    {{$training->location}}
+                                @else
+                                    @if( $training->en_location != null &&  $training->en_location != '')
+                                        {{$training->en_location}}
+                                    @else
+                                        {{$training->location}}
+                                    @endif
+                                @endif
+                            </label>
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-center">详细地址</td>
-                        <td><label>{{ $training->address }}</label></td>
+                        <td>
+                            <label>
+                                @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
+                                    {{$training->address}}
+                                @else
+                                    @if( $training->en_address != null &&  $training->en_address != '')
+                                        {{$training->en_address}}
+                                    @else
+                                        {{$training->address}}
+                                    @endif
+                                @endif
+                            </label>
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-center">开始时间</td>

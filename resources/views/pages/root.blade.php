@@ -126,11 +126,27 @@
 								</div>
 								<div class="our_blog_content">
 									<a href="{{ route('snews.show', [$snew->id]) }}">
-										<h4>{{ $snew->subject }}</h4>
+										<h4>
+										@if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
+										{{ $snew->subject }}
+										@else
+											@if( $snew->subject_en != null &&  $snew->subject_en != '')
+												{{ $snew->subject_en }}
+											@else
+												{{ $snew->subject }}
+											@endif
+										@endif
+										</h4>
 									</a>
-									{!! $snew->excerpt !!}
-									{{--<p>据央广网报道，中央宣讲团成员、中央文献研究室主任冷溶23日早上到香港特区政府总部，为政府官员和高级公务员主讲中共十九大报告。中联办主任王志民等人出席。</p>--}}
-									{{--<h6><a href="#">Frank Martin</a><span>•</span><a href="#">9 Comments</a></h6>--}}
+									@if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
+										{!! $snew->excerpt !!}
+									@else
+										@if( $snew->excerpt_en != null &&  $snew->excerpt_en != '')
+										{!! $snew->excerpt_en !!}
+										@else
+										{!! $snew->excerpt !!}
+										@endif
+									@endif
 								</div>
 							</div>
 						</div>
