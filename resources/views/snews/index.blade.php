@@ -28,7 +28,7 @@
                                 @else
                                     @if( $snew->subject_en != null &&  $snew->subject_en != '')
                                         <a href="{{ route('snews.show', [$snew->id]) }}" title="{{ $snew->subject_en }}">
-                                            {{ $snew->subject }}
+                                            {{ $snew->subject_en }}
                                         </a>
                                     @else
                                         <a href="{{ route('snews.show', [$snew->id]) }}" title="{{ $snew->subject }}">
@@ -47,12 +47,12 @@
                             <div class="media-body meta">
                                 <span class="timeago" title="简介">
                                     @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
-                                        {{ $snew->excerpt }}
+                                        {!! $snew->excerpt !!}
                                     @else
                                         @if( $snew->excerpt_en != null &&  $snew->excerpt_en != '')
-                                            {{ $snew->excerpt_en }}
+                                            {!! $snew->excerpt_en !!}
                                         @else
-                                            {{ $snew->excerpt }}
+                                            {!! $snew->excerpt !!}
                                         @endif
                                     @endif
                                 </span>
