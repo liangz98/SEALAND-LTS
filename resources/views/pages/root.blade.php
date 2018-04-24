@@ -120,8 +120,8 @@
 								<div class="our_blog_img">
 									<img src="/uploads/{{ $snew->excerpt_bg }}" alt="">
 									<div class="b_date">
-										<h6>{{ date('M', strtotime($snew->release_date)) }}</h6>
-										<h5>{{ date('d', strtotime($snew->release_date)) }}</h5>
+										<h6>{{ date('M', strtotime($snew->created_at)) }}</h6>
+										<h5>{{ date('d', strtotime($snew->created_at)) }}</h5>
 									</div>
 								</div>
 								<div class="our_blog_content">
