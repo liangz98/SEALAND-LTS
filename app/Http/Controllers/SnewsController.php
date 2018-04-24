@@ -16,7 +16,7 @@ class SnewsController extends Controller
 
 	public function index(Snew $snew)
 	{
-		$snews = $snew->orderBy('release_date', 'desc')->paginate(15);
+		$snews = $snew->orderBy('created_at', 'desc')->paginate(15);
 		return view('snews.index', compact('snews'));
 	}
 
