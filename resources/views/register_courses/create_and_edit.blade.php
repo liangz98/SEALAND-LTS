@@ -47,12 +47,14 @@
                             <input class="form-control" type="text" name="en_company_name" id="en_company_name-field" value="{{ old('en_company_name', $user->en_company_name ) }}" />
                         </div>
                     </div>
+                    @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
                     <div class="form-group">
                         <label for="company_name-field" class="col-sm-2 control-label">(中文)</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="text" name="company_name" id="company_name-field" value="{{ old('company_name', $user->company_name ) }}" />
                         </div>
                     </div>
+                    @endif
 
                     <div class="form-group">
                         <label for="en_company_address-field" class="col-sm-2 control-label">公司地址(英文)</label>
@@ -60,12 +62,14 @@
                             <input class="form-control" type="text" name="en_company_address" id="en_company_address-field" value="{{ old('en_company_address', $user->en_company_address ) }}" />
                         </div>
                     </div>
+                    @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
                     <div class="form-group">
                         <label for="company_address-field" class="col-sm-2 control-label">(中文)</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="text" name="company_address" id="company_address-field" value="{{ old('company_address', $user->company_address ) }}" />
                         </div>
                     </div>
+                    @endif
 
                     <div class="form-group">
                         <label for="company_phone-field" class="col-sm-2 control-label">办公电话</label>
@@ -86,12 +90,14 @@
                             <input class="form-control" type="text" name="en_mailing_address" id="en_mailing_address-field" value="{{ old('en_mailing_address', $user->en_mailing_address ) }}" />
                         </div>
                     </div>
+                    @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
                     <div class="form-group">
                         <label for="mailing_address-field" class="col-sm-2 control-label">(中文)</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="text" name="mailing_address" id="mailing_address-field" value="{{ old('mailing_address', $user->mailing_address ) }}" />
                         </div>
                     </div>
+                    @endif
 
                     <div class="form-group">
                         <label for="nace_number-field" class="col-sm-2 control-label">NACE会员号</label>
@@ -112,12 +118,14 @@
                             <input class="form-control" type="text" name="en_name" id="en_name-field" value="{{ old('en_name', $user->en_name ) }}" placeholder="英文姓名将显示在您的证书上" />
                         </div>
                     </div>
+                    @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
                     <div class="form-group">
                         <label for="name-field" class="col-sm-2 control-label">(中文)</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="text" name="name" id="name-field" value="{{ old('name', $user->name ) }}" />
                         </div>
                     </div>
+                    @endif
 
                     <div class="form-group">
                         <label for="en_department-field" class="col-sm-2 control-label">所属部门(英文)</label>
@@ -125,12 +133,14 @@
                             <input class="form-control" type="text" name="en_department" id="en_department-field" value="{{ old('en_department', $user->en_department ) }}" />
                         </div>
                     </div>
+                    @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
                     <div class="form-group">
                         <label for="department-field" class="col-sm-2 control-label">(中文)</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="text" name="department" id="department-field" value="{{ old('department', $user->department ) }}" />
                         </div>
                     </div>
+                    @endif
 
                     <div class="form-group">
                         <label for="en_title-field" class="col-sm-2 control-label">职务(英文)</label>
@@ -138,19 +148,23 @@
                             <input class="form-control" type="text" name="en_title" id="en_title-field" value="{{ old('en_title', $user->en_title ) }}" />
                         </div>
                     </div>
+                    @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
                     <div class="form-group">
                         <label for="title-field" class="col-sm-2 control-label">(中文)</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="text" name="title" id="title-field" value="{{ old('title', $user->title ) }}" />
                         </div>
                     </div>
+                    @endif
 
+                    @if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
                     <div class="form-group">
                         <label for="identification_number-field" class="col-sm-2 control-label">身份证号码</label>
                         <div class="col-sm-9">
                             <input class="form-control" type="text" name="identification_number" id="identification_number-field" value="{{ old('identification_number', $user->identification_number ) }}" />
                         </div>
                     </div>
+                    @endif
                     <div class="form-group">
                         <label for="phone-field" class="col-sm-2 control-label">家庭电话</label>
                         <div class="col-sm-9">
