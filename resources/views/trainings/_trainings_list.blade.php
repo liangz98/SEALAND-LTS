@@ -4,10 +4,10 @@
 		<thead>
 		<tr>
 			<th class="text-center">#</th>
-			<th>课程名称</th> <th class="hidden-xs">课程编号</th>
-			<th>剩余名额</th> <th class="hidden-xs">培训地点</th>
-			<th>开始时间</th> <th class="hidden-xs">结束时间</th>
-			<th class="text-right">操作</th>
+			<th>{{ trans('training.course_name') }}</th> <th class="hidden-xs">{{ trans('training.course_code') }}</th>
+			<th>{{ trans('training.remaining_seats') }}</th> <th class="hidden-xs">{{ trans('training.location') }}</th>
+			<th>{{ trans('training.start_day') }}</th> <th class="hidden-xs">{{ trans('training.end_day') }}</th>
+			<th class="text-right">{{ trans('training.registration') }}</th>
 		</tr>
 		</thead>
 
