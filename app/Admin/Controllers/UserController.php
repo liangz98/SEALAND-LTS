@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\Member;
 use App\Models\User;
 
 use Encore\Admin\Form;
@@ -96,6 +97,9 @@ class UserController extends Controller
             // 时间字段的列显示
             $grid->created_at('创建时间');
             // $grid->updated_at();
+    
+            // 排序
+            $grid->model()->orderBy('id', 'desc');
         });
     }
 
@@ -124,6 +128,24 @@ class UserController extends Controller
 
             $form->display('created_at', '创建时间');
             $form->display('updated_at', '修改时间');
+    
+            
+            // 保存后回调
+            /*
+            $form->saved(function (Form $form) {
+                // $form->model()->id;
+                
+                $member = new Member;
+                $member->user_id = $form->model()->id;
+                $member->name = $form->model()->name;
+                $member->en_name = $form->model()->en_name;
+                $member->email = $form->model()->email;
+                $member->created_by = 1;
+                $member->last_updated_by = 1;
+                $member->created_at = $form->model()->created_at;
+                $member->updated_at = $form->model()->updated_at;
+            });
+            */
         });
     }
 }

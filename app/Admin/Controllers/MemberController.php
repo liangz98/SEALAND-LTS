@@ -154,6 +154,9 @@ class MemberController extends Controller
                            '02' => '禁用',
                        ]);
             });
+            
+            // 排序
+            $grid->model()->orderBy('id', 'desc');
         });
     }
 

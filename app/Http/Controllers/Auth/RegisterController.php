@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\Member;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -61,11 +62,26 @@ class RegisterController extends Controller
      * @return \App\Models\User
      */
     protected function create(array $data) {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'status' => '01',
         ]);
+    
+        // 将用户数据写入members
+        $member = new Member;
+        $member->user_id = $user->id;
+        $member->name = $user->name;
+        $member->en_name = $user->en_name;
+        $member->email = $user->email;
+        $member->gender = 'M';
+        $member->created_by = 1;
+        $member->last_updated_by = 1;
+        $member->created_at = $user->created_at;
+        $member->updated_at = $user->updated_at;
+        $member->save();
+        
+        return $user;
     }
 }

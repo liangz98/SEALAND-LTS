@@ -11,7 +11,7 @@ return [
     'location'        => '培训地点',
     'start_day'       => '开始时间',
     'end_day'         => '结束时间',
-    'registration'    => '注册',
+    'registration'    => '申请',
 
     'company_name'    => '公司全称',
     'company_address' => '公司地址',
