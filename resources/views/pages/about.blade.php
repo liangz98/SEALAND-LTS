@@ -33,7 +33,9 @@
 							@endif
 						</div>
 						<div class="row wc-meta text-center">
-							<img src="/uploads/images/about_bg1.png" class="img-responsive" alt="about">
+							<div class="col-sm-12">
+								<img src="/uploads/images/about_bg1.png" class="img-rounded" alt="about">
+							</div>
 						</div>
 					</div>
 				</div>
