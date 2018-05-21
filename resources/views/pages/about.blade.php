@@ -33,7 +33,7 @@
 							@endif
 						</div>
 						<div class="row wc-meta text-center">
-							<div class="col-sm-12">
+							<div class="col-sm-12" style="margin-top: 15px;">
 								<img src="/uploads/images/about_bg1.png" class="img-rounded" alt="about">
 							</div>
 						</div>
