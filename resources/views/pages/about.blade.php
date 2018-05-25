@@ -15,7 +15,7 @@
 						<h4 class="wc-heading text-center">{{ trans('commons.about') }}</h4>
 						<div class="row">
 							@if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
-							<div class="col-sm-10 col-md-10 col-md-offset-1">
+							<div class="col-sm-10 col-md-10 col-sm-offset-1">
 								<div class="wc-text">
 									<p>　　施蓝德防腐技术咨询（北京）有限公司成立于2008年，一直以来专注于防腐蚀事业。业务范围包括提供防腐专业不同领域的培训、国内外涂装项目技术咨询服务、涂装勘验、制定涂层维护管理方案、防腐系统失效分析和建议、特殊防腐涂料、涂层检查仪器和专业除盐剂代理分销业务。</p>
 									<p>　　在培训方面，我司代理世界著名的美国防腐工程师学会NACE的各项专业培训课程。包括著名的涂装检验员课程（CIP）、阴极保护课程（CP）、核电站涂装课程（NPP）和海上平台涂装勘验技术员课程（OCAT）等，十多年来培训学员超过2000人以上。</p>
@@ -25,7 +25,7 @@
 								</div>
 							</div>
 							@else
-							<div class="col-sm-10 col-md-10">
+							<div class="col-sm-10 col-md-10 col-sm-offset-1">
 								<div class="wc-text">
 									<p>SEA LAND CORROSION CONTROL CONSULTING (BEIJING) LIMITED was founded in 2008 and specialized in corrosion continuously.  Business scope includes providing professional training in different corrosion fields, technical consulting services for domestic and foreign coating project, coating inspection, Develop coating maintenance management plans, failure analysis and recommendations for coating systems, special corrosion coatings, coating inspection instruments and specialized desalination agent distribution.</p>
 									<p>In terms of training, we represent the world-renowned NACE International (formerly known as ‘American National Association of Corrosion Engineers’) professional training courses.  Including its renowned Coating Inspector Program (CIP), Cathodic Protection (CP) training, Nuclear Power Plant (NPP) training and Offshore Coating Assessment training (OCAT).  Over a decade, more than 2000 students have been trained.</p>
@@ -111,7 +111,7 @@
 @section('scripts')
 	<script>
 		$(function () {
-			$('[data-toggle="tooltip"]').tooltip()
+			$('[data-toggle="tooltip"]').tooltip();
 		})
 	</script>
 @stop
