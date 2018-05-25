@@ -3,8 +3,11 @@
 
 @section('styles')
 	<style type="text/css">
+		.about-div p:first-child {
+			margin-top: 0;
+		}
 		.about-div p {
-			margin-top: 10px;
+			margin-top: 20px;
 		}
 	</style>
 @stop
@@ -16,7 +19,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="welcome-section-content">
-						<h4 class="wc-heading text-center">{{ trans('commons.about') }}</h4>
+						<h1 class="wc-heading text-center">{{ trans('commons.about') }}</h1>
 						<div class="row">
 							@if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
 							<div class="col-sm-10 col-md-10 col-sm-offset-1">
