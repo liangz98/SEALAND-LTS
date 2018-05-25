@@ -12,7 +12,7 @@ return [
     'topic' => 'TOPIC',
     'member' => 'MEMBER',
     'certification' => 'CERTIFICATION',
-    'about' => 'Company Profile',
+    'about' => 'Company Profile ',
     
     'call_us' => 'Call us',
     'contact_us' => 'Contact us',

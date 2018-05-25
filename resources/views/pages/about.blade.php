@@ -4,7 +4,7 @@
 @section('styles')
 	<style type="text/css">
 		.about-div p {
-			margin-top: 5px;
+			margin-top: 10px;
 		}
 	</style>
 @stop
@@ -15,7 +15,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="welcome-section-content about-div">
+					<div class="welcome-section-content">
 						<h4 class="wc-heading text-center">{{ trans('commons.about') }}</h4>
 						<div class="row">
 							@if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
@@ -30,7 +30,7 @@
 							</div>
 							@else
 							<div class="col-sm-10 col-md-10 col-sm-offset-1">
-								<div class="wc-text">
+								<div class="wc-text about-div">
 									<p>SEA LAND CORROSION CONTROL CONSULTING (BEIJING) LIMITED was founded in 2008 and specialized in corrosion continuously.  Business scope includes providing professional training in different corrosion fields, technical consulting services for domestic and foreign coating project, coating inspection, Develop coating maintenance management plans, failure analysis and recommendations for coating systems, special corrosion coatings, coating inspection instruments and specialized desalination agent distribution.</p>
 									<p>In terms of training, we represent the world-renowned NACE International (formerly known as ‘American National Association of Corrosion Engineers’) professional training courses.  Including its renowned Coating Inspector Program (CIP), Cathodic Protection (CP) training, Nuclear Power Plant (NPP) training and Offshore Coating Assessment training (OCAT).  Over a decade, more than 2000 students have been trained.</p>
 									<p>In terms of technical consulting and services, many projects have been completed in the domestic and foreign countries, including power stations, wind power, marine, offshore platforms, water parks, bridges and so on. We have established long-term partnership with foreign professional companies, rich in technical resources.</p>
