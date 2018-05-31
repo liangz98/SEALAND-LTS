@@ -42,14 +42,16 @@ class RegisterCoursesController extends Controller
     public function store(RegisterCourseRequest $request, RegisterCourse $registerCourse, User $user, FileUploadHandler $uploader) {
         // 检查同一课程是否已报名
         $hasRegister = false;
-        $existRegisterCourses = \DB::table('register_courses')->where([['user_id', Auth::id()], ['training_id', $request->training_id], ['status', '<>', '02']])->get();
+        $existRegisterCourses = \DB::table('register_courses')->where([['user_id', Auth::id()], ['training_id', $request->training_id], ['status', '01']])->get();
         foreach ($existRegisterCourses as $existRegisterCourse) {
             \DB::table('register_courses')
               ->where('id', $existRegisterCourse->id)
               ->update(['status' => '04']);
         }
+        
+        
     
-        $existConfRegisterCourses = \DB::table('register_courses')->where([['user_id', Auth::id()], ['training_id', $request->training_id], ['status', '==', '02']])->get();
+        $existConfRegisterCourses = \DB::table('register_courses')->where([['user_id', Auth::id()], ['training_id', $request->training_id], ['status', '02']])->get();
         if (!empty($existConfRegisterCourses) && count($existConfRegisterCourses) > 0) {
             return redirect()->route('trainings.index', $registerCourse->id)->with('message', '此课程已存在成功的申请!');
         }
