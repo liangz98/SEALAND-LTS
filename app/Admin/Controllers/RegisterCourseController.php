@@ -175,6 +175,8 @@ class RegisterCourseController extends Controller
                 ];
                 
                 $form->switch('need_hotel', '代订酒店')->states($need)->default('1')->rules('nullable');
+                $form->radio('room_type', '房型')->options(['01' => '标房', '02'=> '豪华房'])->rules('nullable');
+                $form->radio('bed_type', '床型')->options(['01' => '双床', '02'=> '大床'])->rules('nullable');
                 $form->text('hotel_check_in_name', '入住者姓名')->rules('nullable');
                 $form->date('hotel_check_in_date', '入住时间')->rules('nullable');
                 $form->text('hotel_days', '共住房晚')->rules('nullable');
