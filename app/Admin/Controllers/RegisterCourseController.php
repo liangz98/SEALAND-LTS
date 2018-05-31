@@ -11,6 +11,8 @@ use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\ModelForm;
+use Encore\Admin\Widgets\Box;
+use Encore\Admin\Widgets\Table;
 
 class RegisterCourseController extends Controller
 {
@@ -64,6 +66,23 @@ class RegisterCourseController extends Controller
             $content->body($this->form());
         });
     }
+    
+    public function show(RegisterCourse $registerCourse) {
+        return Admin::content(function (Content $content) use ($registerCourse) {
+            $content->header('会员');
+            $content->description('信息');
+            
+            $headers = [
+                '字段',
+                '值'
+            ];
+            
+            $table2 = new Table($headers, $registerCourse->toArray());
+            
+            $content->body((new Box('Table-2', $table2))->style('info')
+                ->solid());
+        });
+    }
 
     /**
      * Make a grid builder.
@@ -79,10 +98,16 @@ class RegisterCourseController extends Controller
             $grid->model()->orderBy('id', 'desc');  // 按ID倒序
             $grid->disableCreation();   // 禁用创建按钮
 
-            $grid->id('ID')->sortable();
+            $grid->id('ID')->sortable()
+                ->display(function ($value) {
+                    return "<a href='/admin/registerCourses/$value'>$value</a>";
+                });
     
             $grid->column('training.name', '课程')->label();
-            $grid->column('user.name', '用户名');
+            $grid->column('user.name', '用户名')
+                ->display(function ($value) {
+                    return "<a href='/admin/registerCourses/$value'>$value</a>";
+                });
             $grid->column('member.name', '会员');
             $grid->column('member.member_number', '编号');
             $grid->column('member.email', '邮箱');
