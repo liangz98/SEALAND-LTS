@@ -179,7 +179,11 @@ class RegisterCourseController extends Controller
                 $form->date('hotel_check_in_date', '入住时间')->rules('nullable');
                 $form->text('hotel_days', '共住房晚')->rules('nullable');
             })->tab("开具发票", function (Form $form) {
-                $form->text('need_invoice', '开具发票')->rules('nullable');
+                $need = [
+                    'on'  => ['value' => 1, 'text' => '需要', 'color' => 'success'],
+                    'off' => ['value' => 0, 'text' => '不需要', 'color' => 'danger'],
+                ];
+                $form->switch('need_invoice', '开具发票')->states($need)->default('1')->rules('nullable');
                 $form->text('taxpayer_identification_number', '纳税人识别号')->rules('nullable');
                 $form->text('invoice_address', '地址')->rules('nullable');
                 $form->text('invoice_phone', '电话')->rules('nullable');
