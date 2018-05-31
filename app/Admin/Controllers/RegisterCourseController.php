@@ -100,7 +100,7 @@ class RegisterCourseController extends Controller
 
             $grid->id('ID')->sortable()
                 ->display(function ($value) {
-                    return "<a href='/admin/registerCourses/$value'>$value</a>";
+                    return "<a href='/admin/registerCourses/$value/edit'>$value</a>";
                 });
     
             $grid->column('training.name', '课程')->label();
