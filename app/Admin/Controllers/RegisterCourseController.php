@@ -169,7 +169,12 @@ class RegisterCourseController extends Controller
                 $form->text('en_mailing_address', '证书快递地址(英文)')->rules('nullable');
                 // $form->mobile('mailing_mobile', '收件人电话')->options(['mask' => '999 9999 9999']);
             })->tab("代订酒店", function (Form $form) {
-                $form->text('need_hotel', '代订酒店')->rules('nullable');
+                $need = [
+                    'on'  => ['value' => 1, 'text' => '需要', 'color' => 'success'],
+                    'off' => ['value' => 0, 'text' => '不需要', 'color' => 'danger'],
+                ];
+                
+                $form->switch('need_hotel', '代订酒店')->states($need)->default('1')->rules('nullable');
                 $form->text('hotel_check_in_name', '入住者姓名')->rules('nullable');
                 $form->date('hotel_check_in_date', '入住时间')->rules('nullable');
                 $form->text('hotel_days', '共住房晚')->rules('nullable');
