@@ -48,8 +48,6 @@ class RegisterCoursesController extends Controller
               ->where('id', $existRegisterCourse->id)
               ->update(['status' => '04']);
         }
-        
-        
     
         $existConfRegisterCourses = \DB::table('register_courses')->where([['user_id', Auth::id()], ['training_id', $request->training_id], ['status', '02']])->get();
         if (!empty($existConfRegisterCourses) && count($existConfRegisterCourses) > 0) {
