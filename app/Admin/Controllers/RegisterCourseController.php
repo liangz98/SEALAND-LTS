@@ -107,7 +107,7 @@ class RegisterCourseController extends Controller
             $grid->column('user.name', '用户名');
             $grid->column('member.name', '会员');
             $grid->column('member.member_number', '编号');
-            $grid->column('member.email', '邮箱');
+            $grid->column('email', '邮箱');
             
             $grid->created_at('申请时间');
     
