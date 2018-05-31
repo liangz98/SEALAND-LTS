@@ -146,16 +146,40 @@ class RegisterCourseController extends Controller
                      ]);
     
                 $form->display('created_at', '申请时间');
+            })->tab("个人信息", function (Form $form) {
+                $form->text('name', '姓名')->rules('nullable');
+                $form->text('en_name', '姓名(英文)')->rules('nullable');
+                $form->text('nace_number', 'NACE会员号')->rules('nullable');
+                $form->text('department', '所属部门')->rules('nullable');
+                $form->text('en_department', '所属部门(英文)')->rules('nullable');
+                $form->text('title', '职务')->rules('nullable');
+                $form->text('en_title', '职务(英文)')->rules('nullable');
+                $form->text('identification_number', '身份证号码')->rules('nullable');
+                $form->text('phone', '家庭电话')->rules('nullable');
+                $form->text('mobile', '手机号码')->rules('nullable');
+                $form->text('email', '邮箱地址')->rules('nullable');
             })->tab("公司信息", function (Form $form) {
                 $form->text('company_name', '公司名称')->rules('nullable');
                 $form->text('en_company_name', '公司名称(英文)')->rules('nullable');
                 $form->text('company_address', '公司地址')->rules('nullable');
                 $form->text('en_company_address', '公司地址(英文)')->rules('nullable');
-                $form->mobile('company_phone', '公司电话')->rules('nullable');
-                $form->mobile('company_fax', '公司传真')->rules('nullable');
-                // $form->text('mailing_address', '邮寄地址');
-                // $form->text('mailing_name', '收件人');
+                $form->mobile('company_phone', '办公电话')->rules('nullable');
+                $form->mobile('company_fax', '办公传真')->rules('nullable');
+                $form->text('mailing_address', '证书快递地址')->rules('nullable');
+                $form->text('en_mailing_address', '证书快递地址(英文)')->rules('nullable');
                 // $form->mobile('mailing_mobile', '收件人电话')->options(['mask' => '999 9999 9999']);
+            })->tab("代订酒店", function (Form $form) {
+                $form->text('need_hotel', '代订酒店')->rules('nullable');
+                $form->text('hotel_check_in_name', '入住者姓名')->rules('nullable');
+                $form->date('hotel_check_in_date', '入住时间')->rules('nullable');
+                $form->text('hotel_days', '共住房晚')->rules('nullable');
+            })->tab("开具发票", function (Form $form) {
+                $form->text('need_invoice', '开具发票')->rules('nullable');
+                $form->text('taxpayer_identification_number', '纳税人识别号')->rules('nullable');
+                $form->text('invoice_address', '地址')->rules('nullable');
+                $form->text('invoice_phone', '电话')->rules('nullable');
+                $form->text('invoice_bank_name', '开户行')->rules('nullable');
+                $form->text('invoice_bank_no', '账号')->rules('nullable');
             });
             
     
