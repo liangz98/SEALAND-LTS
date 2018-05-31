@@ -104,10 +104,7 @@ class RegisterCourseController extends Controller
                 });
     
             $grid->column('training.name', '课程')->label();
-            $grid->column('user.name', '用户名')
-                ->display(function ($value) {
-                    return "<a href='/admin/registerCourses/$value'>$value</a>";
-                });
+            $grid->column('user.name', '用户名');
             $grid->column('member.name', '会员');
             $grid->column('member.member_number', '编号');
             $grid->column('member.email', '邮箱');
