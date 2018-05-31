@@ -69,7 +69,7 @@ class RegisterCourseController extends Controller
     
     public function show(RegisterCourse $registerCourse) {
         return Admin::content(function (Content $content) use ($registerCourse) {
-            $content->header('会员');
+            $content->header('培训申请');
             $content->description('信息');
             
             $headers = [
@@ -79,7 +79,7 @@ class RegisterCourseController extends Controller
             
             $table2 = new Table($headers, $registerCourse->toArray());
             
-            $content->body((new Box('Table-2', $table2))->style('info')
+            $content->body((new Box('培训申请', $table2))->style('info')
                 ->solid());
         });
     }
