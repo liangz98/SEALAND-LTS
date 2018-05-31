@@ -50,7 +50,7 @@ class RegisterCoursesController extends Controller
         }
     
         $existConfRegisterCourses = \DB::table('register_courses')->where([['user_id', Auth::id()], ['training_id', $request->training_id], ['status', '==', '02']])->get();
-        if (!empty($existConfRegisterCourses)) {
+        if (!empty($existConfRegisterCourses) && count($existConfRegisterCourses) > 0) {
             return redirect()->route('trainings.index', $registerCourse->id)->with('message', '此课程已存在成功的申请!');
         }
         
