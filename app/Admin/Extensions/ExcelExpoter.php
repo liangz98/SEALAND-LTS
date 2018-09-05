@@ -19,9 +19,9 @@ class ExcelExpoter extends AbstractExporter {
     }
     
     public function export() {
-        Excel::create('Filename', function ($excel) {
+        Excel::create('培训申请', function ($excel) {
             
-            $excel->sheet('Sheetname', function ($sheet) {
+            $excel->sheet('培训申请', function ($sheet) {
                 
                 // 这段逻辑是从表格数据中取出需要导出的字段
                 // $rows = collect($this->getData())->map(function ($item) {
