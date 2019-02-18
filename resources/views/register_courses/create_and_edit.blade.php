@@ -122,7 +122,7 @@
                     <div class="form-group">
                         <label for="name-field" class="col-sm-2 control-label">(中文)</label>
                         <div class="col-sm-9">
-                            <input class="form-control" type="text" name="name" id="name-field" value="{{ old('name', $user->name ) }}" />
+                            <input class="form-control" type="text" name="name" id="name-field" value="{{ old('name', $user->name ) }}" placeholder="请填写真实姓名，将显示在您的证书上。" />
                         </div>
                     </div>
                     @endif

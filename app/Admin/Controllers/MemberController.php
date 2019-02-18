@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Extensions\ExcelExpoter;
 use App\Models\Member;
 
 use Encore\Admin\Form;
@@ -157,6 +158,11 @@ class MemberController extends Controller
             
             // 排序
             $grid->model()->orderBy('id', 'desc');
+    
+            $excel = new ExcelExpoter();
+            $excel->setAttr('会员', ['id', 'member_number', 'user_id', 'name', 'en_name', 'gender', 'email', 'oth_email', 'mobile_phone', 'oth_mobile_phone', 'country', 'en_country', 'country_code', 'state', 'en_state', 'city', 'en_city', 'street', 'en_street', 'address', 'en_address', 'company_name', 'en_company_name', 'title', 'company_address', 'en_company_address', 'mailing_address', 'en_mailing_address', 'mailing_name', 'mailing_mobile', 'certification_id', 'zip_code', 'created_at'],
+                ['id', 'member_number', 'user_id', 'name', 'en_name', 'gender', 'email', 'oth_email', 'mobile_phone', 'oth_mobile_phone', 'country', 'en_country', 'country_code', 'state', 'en_state', 'city', 'en_city', 'street', 'en_street', 'address', 'en_address', 'company_name', 'en_company_name', 'title', 'company_address', 'en_company_address', 'mailing_address', 'en_mailing_address', 'mailing_name', 'mailing_mobile', 'certification_id', 'zip_code', 'created_at']);
+            $grid->exporter($excel);
         });
     }
 

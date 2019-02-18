@@ -123,7 +123,7 @@ class RegisterCourseController extends Controller
                  ]);
     
             $excel = new ExcelExpoter();
-            $excel->setAttr(['id', '培训课程', '会员', '姓名', '姓名(英文)', 'NACE会员号', '所属部门', '所属部门(英文)', '职务', '职务(英文)', '身份证号码', '家庭电话', '手机号码', '邮箱', '公司名', '公司名称(英文)', '公司地址', '公司地址(英文)', '办公电话', '办公传真', '证书快递地址', '证书快递地址(英文)', '代订酒店', '房型', '床型', '入住者姓名', '入住时间', '共住房晚', '开具发票', '纳税人识别号', '地址', '电话', '开户行', '账号'],
+            $excel->setAttr('培训申请', ['id', '培训课程', '会员', '姓名', '姓名(英文)', 'NACE会员号', '所属部门', '所属部门(英文)', '职务', '职务(英文)', '身份证号码', '家庭电话', '手机号码', '邮箱', '公司名', '公司名称(英文)', '公司地址', '公司地址(英文)', '办公电话', '办公传真', '证书快递地址', '证书快递地址(英文)', '代订酒店', '房型', '床型', '入住者姓名', '入住时间', '共住房晚', '开具发票', '纳税人识别号', '地址', '电话', '开户行', '账号'],
                 ['id', 'training.name', 'member.name', 'user.name', 'user.en_name', 'user.nace_number', 'department', 'en_department', 'title', 'en_title', 'identification_number', 'phone', 'mobile', 'email', 'company_name', 'en_company_name', 'company_address', 'en_company_address', 'company_phone', 'company_fax', 'mailing_address', 'en_mailing_address', 'need_hotel', 'room_type', 'bed_type', 'hotel_check_in_name', 'hotel_check_in_date', 'hotel_days', 'need_invoice', 'taxpayer_identification_number', 'invoice_address', 'invoice_phone', 'invoice_bank_name', 'invoice_bank_no']);
             $grid->exporter($excel);
     

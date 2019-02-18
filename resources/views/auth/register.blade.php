@@ -16,7 +16,7 @@
                                 <label for="name" class="col-md-4 control-label">{{ trans('auth.name') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus placeholder="请填写真实姓名，将显示在您的证书上。">
 
                                     @if ($errors->has('name'))
                                         <span class="help-block">

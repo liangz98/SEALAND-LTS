@@ -35,7 +35,7 @@
                     @else
                         @foreach($trainingCategories as $key => $trainingCategory)
                             @if (if_query('tab', $trainingCategory->id))
-                                @include('trainings._trainings_list', ['trainings' => \App\Models\Training::where([['category_id', $trainingCategory->id]])->paginate(10)])
+                                @include('trainings._trainings_list', ['trainings' => \App\Models\Training::where([['category_id', $trainingCategory->id], ['start_date', '>', \Carbon\Carbon::now()]])->paginate(10)])
                             @endif
                         @endforeach
                     @endif

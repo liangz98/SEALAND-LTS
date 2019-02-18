@@ -33,7 +33,7 @@ class TrainingsController extends Controller
                 // ->get();
                                  ->paginate(10);
         }
-        
+    
         // $trainings = Training::paginate();
         return view('trainings.index', compact('trainings', 'trainingCategories'));
     }

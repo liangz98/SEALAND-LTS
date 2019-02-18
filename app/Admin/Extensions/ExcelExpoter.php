@@ -11,17 +11,20 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class ExcelExpoter extends AbstractExporter {
     
+    protected $sheetName = '';
     protected $head = [];
     protected $body = [];
-    public function setAttr($head, $body){
+    
+    public function setAttr($sheetName, $head, $body) {
+        $this->sheetName = $sheetName;
         $this->head = $head;
         $this->body = $body;
     }
     
     public function export() {
-        Excel::create('培训申请', function ($excel) {
+        Excel::create($this->sheetName, function ($excel) {
             
-            $excel->sheet('培训申请', function ($sheet) {
+            $excel->sheet($this->sheetName, function ($sheet) {
                 
                 // 这段逻辑是从表格数据中取出需要导出的字段
                 // $rows = collect($this->getData())->map(function ($item) {

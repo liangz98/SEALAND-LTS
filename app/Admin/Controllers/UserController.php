@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Extensions\ExcelExpoter;
 use App\Models\Member;
 use App\Models\User;
 
@@ -100,6 +101,11 @@ class UserController extends Controller
     
             // 排序
             $grid->model()->orderBy('id', 'desc');
+    
+            $excel = new ExcelExpoter();
+            $excel->setAttr('用户', ['id', 'name', 'en_name', 'email', 'member_id', 'introduction', 'company_name', 'en_company_name', 'company_address', 'en_company_address', 'company_phone', 'company_fax', 'mailing_address', 'en_mailing_address', 'nace_number', 'department', 'en_department', 'title', 'en_title', 'identification_number', 'phone', 'mobile', 'invoice_mailing_address', 'invoice_mailing_name', 'invoice_mailing_zip_code', 'invoice_mailing_phone', 'taxpayer_identification_number', 'invoice_address', 'invoice_phone', 'invoice_bank_name', 'invoice_bank_no', 'invoice_title'],
+                ['id', 'name', 'en_name', 'email', 'member_id', 'introduction', 'company_name', 'en_company_name', 'company_address', 'en_company_address', 'company_phone', 'company_fax', 'mailing_address', 'en_mailing_address', 'nace_number', 'department', 'en_department', 'title', 'en_title', 'identification_number', 'phone', 'mobile', 'invoice_mailing_address', 'invoice_mailing_name', 'invoice_mailing_zip_code', 'invoice_mailing_phone', 'taxpayer_identification_number', 'invoice_address', 'invoice_phone', 'invoice_bank_name', 'invoice_bank_no', 'invoice_title']);
+            $grid->exporter($excel);
         });
     }
 
