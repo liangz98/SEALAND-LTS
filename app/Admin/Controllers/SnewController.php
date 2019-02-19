@@ -105,11 +105,11 @@ class SnewController extends Controller
                 $form->image('excerpt_bg', '简介底图')
                      ->move('images/news/bg')->uniqueName();
     
-                $form->simditor('body', '内容');
+                $form->editor('body', '内容');
             })->tab("英文", function (Form $form) {
                 $form->text('subject_en', '标题(英文)');
                 $form->simditor('excerpt_en', '简介(英文)');
-                $form->simditor('body_en', '内容');
+                $form->editor('body_en', '内容');
             });
 
 

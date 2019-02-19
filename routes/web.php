@@ -45,6 +45,9 @@ Route::resource('notifications', 'NotificationsController', ['only' => ['index']
 // 无权限提醒路由
 Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
 
+// 后台上传图片
+Route::post('/uploadFile', 'UploadsController@uploadImg');
+
 
 Route::resource('news', 'NewsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('training_categories', 'TrainingCategoriesController', ['only' => ['show']]);

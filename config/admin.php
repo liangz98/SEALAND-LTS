@@ -74,6 +74,9 @@ return [
             'image'  => '',
             'file'   => 'files',
         ],
+    
+        // 将upload改为uploads
+        'host' => 'http://localhost:8000/uploads/',
     ],
 
     /*
