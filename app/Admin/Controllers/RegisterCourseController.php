@@ -125,14 +125,15 @@ class RegisterCourseController extends Controller
             // 筛选功能
             $grid->filter(function (Grid\Filter $filter) {
                 // $filter->disableIdFilter();
+                
                 $filter->where(function ($query) {
                     $query->whereHas('Training', function ($query) {
                         $query->where('name', 'like', "%{$this->input}%")->orWhere('en_name', 'like', "%{$this->input}%");
                     });
                 }, '课程名称');
     
-                $filter->between('created_at', '课程时间')->datetime();
-                
+                $filter->between('start_date', '课程时间')->date();
+    
                 $filter->where(function ($query) {
                     $query->where('company_name', 'like', "%{$this->input}%")
                         ->orWhere('en_company_name', 'like', "%{$this->input}%");

@@ -31,6 +31,7 @@
                         <label for="start_date-field" class="col-sm-2 control-label">开始时间</label>
                         <div class="col-sm-9">
                             <p class="form-control-static">{{ old('start_date', date('Y-m-d', strtotime($training->start_date)) ) }}</p>
+                            <input type="hidden" name="start_date" value="{{ old('start_date', date('Y-m-d', strtotime($training->start_date)) ) }}">
                         </div>
                     </div>
                     <div class="form-group">
@@ -38,6 +39,7 @@
                         <div class="col-sm-9">
                             <p class="form-control-static">{{ old('end_date', date('Y-m-d', strtotime($training->end_date)) ) }}</p>
 {{--                            <input class="form-control" type="text" id="end_date-field" value="{{ old('end_date', $training->end_date ) }}" readonly="readonly" />--}}
+                            <input type="hidden" name="end_date" value="{{ old('start_date', date('Y-m-d', strtotime($training->end_date)) ) }}">
                         </div>
                     </div>
 

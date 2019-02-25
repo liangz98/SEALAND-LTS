@@ -110,6 +110,9 @@ class RegisterCoursesController extends Controller
         } else {
             $registerCourse->need_invoice = False;
         }
+    
+        $registerCourse->start_date = $request->start_date;
+        $registerCourse->end_date = $request->end_date;
         
         
         // 封装页面提交的附件
