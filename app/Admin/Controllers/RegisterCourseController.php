@@ -111,6 +111,13 @@ class RegisterCourseController extends Controller
             $grid->column('member.name', '会员');
             $grid->column('member.member_number', '编号');
             $grid->column('email', '邮箱');
+    
+            // 设置text、color、和存储值
+            $isPay = [
+                'on'  => ['value' => 1, 'text' => '已付', 'color' => 'primary'],
+                'off' => ['value' => 0, 'text' => '未付', 'color' => 'default'],
+            ];
+            $grid->column('is_pay', '是否付款')->switch($isPay);
             
             $grid->created_at('申请时间');
     
@@ -151,8 +158,8 @@ class RegisterCourseController extends Controller
             });
     
             $excel = new ExcelExpoter();
-            $excel->setAttr('培训申请', ['id', '培训课程', '会员', '姓名', '姓名(英文)', 'NACE会员号', '所属部门', '所属部门(英文)', '职务', '职务(英文)', '身份证号码', '家庭电话', '手机号码', '邮箱', '公司名', '公司名称(英文)', '公司地址', '公司地址(英文)', '办公电话', '办公传真', '证书快递地址', '证书快递地址(英文)', '代订酒店', '房型', '床型', '入住者姓名', '入住时间', '共住房晚', '开具发票', '纳税人识别号', '地址', '电话', '开户行', '账号'],
-                ['id', 'training.name', 'member.name', 'user.name', 'user.en_name', 'user.nace_number', 'department', 'en_department', 'title', 'en_title', 'identification_number', 'phone', 'mobile', 'email', 'company_name', 'en_company_name', 'company_address', 'en_company_address', 'company_phone', 'company_fax', 'mailing_address', 'en_mailing_address', 'need_hotel', 'room_type', 'bed_type', 'hotel_check_in_name', 'hotel_check_in_date', 'hotel_days', 'need_invoice', 'taxpayer_identification_number', 'invoice_address', 'invoice_phone', 'invoice_bank_name', 'invoice_bank_no']);
+            $excel->setAttr('培训申请', ['id', '培训课程', '会员', '姓名', '姓名(英文)', 'NACE会员号', '所属部门', '所属部门(英文)', '职务', '职务(英文)', '身份证号码', '家庭电话', '手机号码', '邮箱', '公司名', '公司名称(英文)', '公司地址', '公司地址(英文)', '办公电话', '办公传真', '证书快递地址', '证书快递地址(英文)', '代订酒店', '房型', '床型', '入住者姓名', '入住时间', '共住房晚', '开具发票', '纳税人识别号', '地址', '电话', '开户行', '账号', '是否付款'],
+                ['id', 'training.name', 'member.name', 'user.name', 'user.en_name', 'user.nace_number', 'department', 'en_department', 'title', 'en_title', 'identification_number', 'phone', 'mobile', 'email', 'company_name', 'en_company_name', 'company_address', 'en_company_address', 'company_phone', 'company_fax', 'mailing_address', 'en_mailing_address', 'need_hotel', 'room_type', 'bed_type', 'hotel_check_in_name', 'hotel_check_in_date', 'hotel_days', 'need_invoice', 'taxpayer_identification_number', 'invoice_address', 'invoice_phone', 'invoice_bank_name', 'invoice_bank_no', 'is_pay']);
             $grid->exporter($excel);
     
             // $grid->exporter(new ExcelExpoter());
@@ -174,6 +181,12 @@ class RegisterCourseController extends Controller
                 $form->display('training.name', '培训课程');
                 $form->display('member.name', '会员');
                 $form->display('member.member_number', '编号');
+    
+                $isPay = [
+                    'on'  => ['value' => 1, 'text' => '已付', 'color' => 'primary'],
+                    'off' => ['value' => 0, 'text' => '未付', 'color' => 'default'],
+                ];
+                $form->switch('is_pay', '是否付款')->states($isPay)->default(0);
     
                 $form->select('status', '状态')
                      ->options([
