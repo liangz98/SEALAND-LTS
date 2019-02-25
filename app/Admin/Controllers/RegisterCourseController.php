@@ -115,7 +115,7 @@ class RegisterCourseController extends Controller
             // 设置text、color、和存储值
             $isPay = [
                 'on'  => ['value' => 1, 'text' => '已付', 'color' => 'primary'],
-                'off' => ['value' => 0, 'text' => '未付', 'color' => 'default'],
+                'off' => ['value' => 0, 'text' => '未付', 'color' => 'danger'],
             ];
             $grid->column('is_pay', '是否付款')->switch($isPay);
             
@@ -184,7 +184,7 @@ class RegisterCourseController extends Controller
     
                 $isPay = [
                     'on'  => ['value' => 1, 'text' => '已付', 'color' => 'primary'],
-                    'off' => ['value' => 0, 'text' => '未付', 'color' => 'default'],
+                    'off' => ['value' => 0, 'text' => '未付', 'color' => 'danger'],
                 ];
                 $form->switch('is_pay', '是否付款')->states($isPay)->default(0);
     
