@@ -142,6 +142,11 @@ class RegisterCourseController extends Controller
                     $query->where('company_address', 'like', "%{$this->input}%")
                         ->orWhere('en_company_address', 'like', "%{$this->input}%");
                 }, '地址');
+    
+                $filter->where(function ($query) {
+                    $query->where('name', 'like', "%{$this->input}%")
+                        ->orWhere('en_name', 'like', "%{$this->input}%");
+                }, '用户名');
             });
     
             $excel = new ExcelExpoter();
