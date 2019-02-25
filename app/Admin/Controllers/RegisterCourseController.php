@@ -201,6 +201,8 @@ class RegisterCourseController extends Controller
                 $form->text('name', '姓名')->rules('nullable');
                 $form->text('en_name', '姓名(英文)')->rules('nullable');
                 $form->text('nace_number', 'NACE会员号')->rules('nullable');
+                $form->text('identification_number', '证件号码')->rules('nullable');
+                $form->date('birthday', '出生日期')->rules('nullable');
                 $form->text('department', '所属部门')->rules('nullable');
                 $form->text('en_department', '所属部门(英文)')->rules('nullable');
                 $form->text('title', '职务')->rules('nullable');

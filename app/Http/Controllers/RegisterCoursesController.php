@@ -80,6 +80,7 @@ class RegisterCoursesController extends Controller
         $registerCourse->en_title = $request->en_title;
         $registerCourse->title = $request->title;
         $registerCourse->identification_number = $request->identification_number;
+        $registerCourse->birthday = $request->birthday;
         $registerCourse->phone = $request->phone;
         $registerCourse->mobile = $request->mobile;
         $registerCourse->email = $request->email;

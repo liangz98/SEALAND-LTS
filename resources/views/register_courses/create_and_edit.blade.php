@@ -167,6 +167,14 @@
                         </div>
                     </div>
                     @endif
+
+                    <div class="form-group">
+                        <label for="birthday-field" class="col-sm-2 control-label">出生日期</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" type="date" name="birthday" id="birthday-field" value="" />
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label for="phone-field" class="col-sm-2 control-label">家庭电话</label>
                         <div class="col-sm-9">
@@ -365,6 +373,27 @@ $(document).ready(function(){
 			$(".invoice_div-div").hide();
 		}
 	});
+
+	getBirthdayFromIdCard();
+	$("#identification_number-field").change(function () {
+		getBirthdayFromIdCard();
+	});
 });
+
+function getBirthdayFromIdCard() {
+	let birthday = "";
+	let identification = $("#identification_number-field").val();
+	if (identification != null && identification !== "") {
+		if (identification.length === 15) {
+			birthday = "19" + identification.substr(6, 6);
+		} else if (identification.length === 18) {
+			birthday = identification.substr(6, 8);
+		}
+
+		birthday = birthday.replace(/(.{4})(.{2})/, "$1-$2-");
+	}
+
+	$("#birthday-field").val(birthday);
+}
 </script>
 @stop
