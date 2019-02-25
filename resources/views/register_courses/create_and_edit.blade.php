@@ -273,7 +273,7 @@
                     <div class="form-group invoice_t_div" style="display: none">
                         <label for="invoice_address-field" class="col-sm-2 control-label">地址</label>
                         <div class="col-sm-9">
-                            <input class="form-control" type="text" name="invoice_address" id="invoice_address-field" />
+                            <input class="form-control" type="text" name="invoice_address" id="invoice_address-field" value="{{ old('invoice_address', $user->invoice_address) }}" />
                         </div>
                     </div>
 
