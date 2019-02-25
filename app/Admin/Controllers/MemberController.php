@@ -149,6 +149,8 @@ class MemberController extends Controller
         
                 $filter->like('email', 'E-Mail');
     
+                $filter->like('mobile_phone', '手机号码');
+    
                 $filter->equal('status', '状态')
                        ->select([
                            '01' => '正常',
