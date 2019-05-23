@@ -38,6 +38,7 @@
 									<p>On trainings, we are the partner of the world leading corrosion organization NACE International providing its world renowned and recognized programs such as Coating Inspector Program (CIP), CIP Nuclear (NPP), Cathodic Protection (CP), Corrosion Under Insulation (CUI) and Offshore Corrosion Assessment Technician (OCAT).  Over 3000 corrosion professionals were trained by us in the last decade.</p>
 									<p>We have been involved and working with our overseas associates in different areas of the industry such as power station, wind power, shipbuilding and offshore platform, marine park, bridges, pipelines and so forth.</p>
 									<p>On product trading, we are the distributor of the proprietary salt remover <a href="https://www.chlor-rid.com/" target="_blank" data-toggle="tooltip" title="" data-original-title="A unique organic bonding chemistry which aids in the removal of chlorides, sulfates and surface reacted salts.">Chlor Rid</a>, <a href="https://www.defelsko.com/" target="_blank" data-toggle="tooltip" title="" data-original-title="CFI coatings">Defelsko inspection equipment</a> , and <a href="https://www.cficoatings.com/" target="_blank" data-toggle="tooltip" title="" data-original-title="CFI coatings">CFI Coatings</a>.</p>
+									<p>We have office in Beijing and Guangzhou to provide high quality services to the industry.</p>
 								</div>
 							</div>
 							@endif
