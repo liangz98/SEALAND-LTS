@@ -54,7 +54,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="/">
-                        <i class="fa fa-terminal"></i> SEALAND
+                        <i class="fa fa-terminal"></i> SEA LAND
                     </a>
                 </div>
 
