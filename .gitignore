@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/uploads/files/training
+/public/uploads/images/news
 /storage/*.key
 /vendor
 /.idea
