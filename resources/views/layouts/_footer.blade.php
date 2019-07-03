@@ -101,7 +101,7 @@
             <h4>Copyright &copy; 2017.<a href="/">Sea Land Consulting Services Limited. </a> All rights reserved.</h4>
         </div>
         <div class="container">
-            <h4>ICP证：<a href="http://www.beian.miit.gov.cn">粤ICP备14011198号</a></h4>
+            <h4>ICP证：<a href="http://www.beian.miit.gov.cn" target="_blank">粤ICP备14011198号</a></h4>
         </div>
     </div>
 </footer>
