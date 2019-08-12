@@ -24,7 +24,7 @@
 							@if(\Illuminate\Support\Facades\App::getLocale() == 'zh-CN')
 							<div class="col-sm-10 col-md-10 col-sm-offset-1">
 								<div class="wc-text">
-									<p>　　施蓝德防腐技术咨询（北京）有限公司成立于2008年，一直以来专注于防腐蚀事业。业务范围包括提供防腐专业不同领域的培训、国内外涂装项目技术咨询服务、涂装勘验、制定涂层维护管理方案、防腐系统失效分析和建议、特殊防腐涂料、涂层检查仪器和专业除盐剂代理分销业务。</p>
+									<p>　　海岸华宝信息咨询服务部{{-- 施蓝德防腐技术咨询（北京）有限公司 --}}成立于2008年，一直以来专注于防腐蚀事业。业务范围包括提供防腐专业不同领域的培训、国内外涂装项目技术咨询服务、涂装勘验、制定涂层维护管理方案、防腐系统失效分析和建议、特殊防腐涂料、涂层检查仪器和专业除盐剂代理分销业务。</p>
 									<p>　　在培训方面，我司代理世界著名的美国防腐工程师学会NACE的各项专业培训课程。包括著名的涂装检验员课程（CIP）、阴极保护课程（CP）、核电站涂装课程（NPP）和海上平台涂装勘验技术员课程（OCAT）等，十多年来培训学员超过2000人以上。</p>
 									<p>　　在技术咨询和现场监理服务方面，先后完成了国内外诸多项目，包括发电站、风电、船舶、海上平台、水上乐园、桥梁等等。我司和国外各领域的专业单位建立了长期的伙伴合作关系，技术资源丰富。</p>
 									<p>　　在贸易方面，我司代理美国专利产品除盐剂 <a href="https://www.chlor-rid.com/" target="_blank" data-toggle="tooltip" title="" data-original-title="一种特制的有机结合化学剂，使用于减除底材表面上的可溶性盐，如氯化盐和硫酸盐等">Chlor Rid</a> ，<a href="https://www.cficoatings.com/" target="_blank" data-toggle="tooltip" title="" data-original-title="CFI">CFI</a> 涂料和 <a href="https://www.defelsko.com/" target="_blank" data-toggle="tooltip" title="" data-original-title="包括涂层测厚仪，表面粗糙度仪，露点仪，可溶性盐测试仪，拉拔附着力测试仪等。">Defelsko</a> 涂层检查仪器等。</p>
