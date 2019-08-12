@@ -7,7 +7,8 @@
                     <aside class="f_widget about_widget">
                         <div class="f_title">
                             <img src="/images/logo_trans.png" width="32px" height="32px" alt="">
-                            <p>施蓝德防腐技术咨询（北京）有限公司简介。</p>
+                            {{--<p>施蓝德防腐技术咨询（北京）有限公司简介。</p>--}}
+                            <p>广州市荔湾区海岸华宝信息咨询服务部</p>
                         </div>
                         <ul class="list-inline widget_ab_fa">
                             <li>-  <a href=""><i class="fa fa-facebook"></i></a></li>
