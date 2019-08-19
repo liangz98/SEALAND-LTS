@@ -32,4 +32,7 @@ return [
     /* 语言 */
     'Chinese' => '中文',
     'English' => 'English',
+    /* 版权 */
+    'services_limited' => '海岸华宝信息咨询服务',
+    'all_rights_reserved' => '版权所有',
 ];

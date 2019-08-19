@@ -32,4 +32,7 @@ return [
     /* 语言 */
     'Chinese' => '中文',
     'English' => 'English',
+    /* 版权 */
+    'services_limited' => 'Sea Land Consulting Services Limited',
+    'all_rights_reserved' => 'All rights reserved',
 ];
