@@ -67,14 +67,13 @@
                                     <address class="text-white">
                                         <strong class="text-primary">北京</strong><br>
                                         北京市丰台区右安门外大街99号华商科技大厦526室.<br>
-                                        <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-010-63357814" class="text-white">+86-010-63357814</a><br>
+                                        <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-010-63357814" class="text-white">+86-10-63357814</a><br>
                                     </address>
 
                                     <address class="text-white">
-                                        <strong class="text-primary">广州</strong><br>
-                                        广州市荔湾区中山八路新虹街40-48号荔景楼B座807室.<br>
-                                        <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-020-81933883" class="text-white">+86-020-81933883</a><br>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+86-020-81935678" class="text-white">+86-020-81935678</a>
+                                        <strong class="text-primary">上海</strong><br>
+                                        上海 闵行区 申坤路1899号 宇培国际控股 C座 719室.<br>
+                                        <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-020-81933883" class="text-white">+86-21-5471 7822</a><br>
                                     </address>
 
                                     {{--<p>
