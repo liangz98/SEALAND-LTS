@@ -73,7 +73,7 @@
                                     <address class="text-white">
                                         <strong class="text-primary">上海</strong><br>
                                         上海 闵行区 申昆路1899号 宇培国际控股C座719室.<br>
-                                        <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-020-81933883" class="text-white">+86-21-5471 7822</a><br>
+                                        <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-020-81933883" class="text-white">+86-21-54717822</a><br>
                                     </address>
 
                                     {{--<p>
