@@ -24,4 +24,5 @@ return [
     'confirm_password' => '确认密码',
     'remember_me' => '记住我',
     'forgot_password' => '忘记密码？',
+    'name_tips' => '请填写真实姓名，将显示在您的证书上。',
 ];

@@ -64,7 +64,7 @@
 							<i class="fa fa-user-o"></i>
 						</div>
 						<div class="counter-2-content">
-							<span class="counter">1280</span>
+							<span class="counter">2054</span>
 							<p>拥有会员</p>
 						</div>
 					</div>
@@ -75,7 +75,7 @@
 							<i class="fa fa-book"></i>
 						</div>
 						<div class="counter-2-content">
-							<span class="counter">180</span>
+							<span class="counter">182</span>
 							<p>开展课程</p>
 						</div>
 					</div>
@@ -99,7 +99,7 @@
 							<i class="fa fa-id-card-o"></i>
 						</div>
 						<div class="counter-2-content">
-							<span class="counter">930</span>
+							<span class="counter">3826</span>
 							<p>颁发证书</p>
 						</div>
 					</div>

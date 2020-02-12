@@ -24,4 +24,5 @@ return [
     'confirm_password' => 'Confirm Password',
     'remember_me' => 'Remember Me',
     'forgot_password' => 'Forgot Your Password?',
+    'name_tips' => 'Please type your name that is printed on your certificate',
 ];

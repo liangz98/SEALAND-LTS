@@ -35,4 +35,13 @@ return [
     /* 版权 */
     'services_limited' => 'Sea Land Consulting Services Limited',
     'all_rights_reserved' => 'All rights reserved',
+    
+    /* 公司信息 */
+    'sea_ltd' => 'Sea Land Corrosion Control Consulting (Beijing) Ltd',
+    'location_name_hk' => 'Hong Kong',
+    'location_name_beijing' => 'Beijing',
+    'location_name_shanghai' => 'Shanghai',
+    'location_hk' => 'Unit 1219, 12F, Tuen Mun Central Square, 22 Hoi Wing Road, Tuen Mun, Hong Kong.',
+    'location_beijing' => 'Rm526, Hua Shang Technology Building, No.99 You An Men Wai Da St., Fengtai Dist.,Beijing, China',
+    'location_shanghai' => 'Rm719, Block C, No.1899 ShenKun Rd. Minhang Dist, Shanghai, China',
 ];

@@ -35,4 +35,13 @@ return [
     /* 版权 */
     'services_limited' => '海岸华宝信息咨询服务',
     'all_rights_reserved' => '版权所有',
+    
+    /* 公司信息 */
+    'sea_ltd' => 'Sea Land Corrosion Control Consulting (Beijing) Ltd',
+    'location_name_hk' => '香港',
+    'location_name_beijing' => '北京',
+    'location_name_shanghai' => '上海',
+    'location_hk' => '香港 屯门 海荣路22号 屯门中央广场12楼1219室',
+    'location_beijing' => '北京市 丰台区 右安门外大街99号 华商科技大厦526室',
+    'location_shanghai' => '上海 闵行区 申昆路1899号 宇培国际控股C座719室',
 ];

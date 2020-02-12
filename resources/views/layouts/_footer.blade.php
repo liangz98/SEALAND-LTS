@@ -59,20 +59,20 @@
                                     <br>
 
                                     <address class="text-white">
-                                        <strong class="text-primary">香港</strong><br>
-                                        香港 屯门 海荣路22号 屯门中央广场12楼1219室.<br>
+                                        <strong class="text-primary">{{ trans('commons.location_name_hk') }}</strong><br>
+                                        {{ trans('commons.location_hk') }}<br>
                                         <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+852-22747182" class="text-white">+852-22747182</a><br>
                                     </address>
 
                                     <address class="text-white">
-                                        <strong class="text-primary">北京</strong><br>
-                                        北京市 丰台区 右安门外大街99号 华商科技大厦526室.<br>
+                                        <strong class="text-primary">{{ trans('commons.location_name_beijing') }}</strong><br>
+                                        {{ trans('commons.location_beijing') }}<br>
                                         <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-010-63357814" class="text-white">+86-10-63357814</a><br>
                                     </address>
 
                                     <address class="text-white">
-                                        <strong class="text-primary">上海</strong><br>
-                                        上海 闵行区 申昆路1899号 宇培国际控股C座719室.<br>
+                                        <strong class="text-primary">{{ trans('commons.location_name_shanghai') }}</strong><br>
+                                        {{ trans('commons.location_shanghai') }}<br>
                                         <abbr title="Phone">Phone:</abbr>&nbsp;&nbsp;<a href="tel:+86-020-81933883" class="text-white">+86-21-54717822</a><br>
                                     </address>
 
