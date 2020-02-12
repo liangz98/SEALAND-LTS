@@ -37,7 +37,7 @@ return [
     'all_rights_reserved' => '版权所有',
     
     /* 公司信息 */
-    'sea_ltd' => 'Sea Land Corrosion Control Consulting (Beijing) Ltd',
+    'sea_ltd' => '施蓝德防腐技术咨询（北京）有限公司',
     'location_name_hk' => '香港',
     'location_name_beijing' => '北京',
     'location_name_shanghai' => '上海',
