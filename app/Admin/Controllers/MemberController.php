@@ -191,7 +191,7 @@ class MemberController extends Controller
      */
     protected function form()
     {
-        Admin::script('var birthday_input = document.getElementById("birthday"); input.addEventListener("oninput", function() { console.log("hello world!!!!!"); }, false);');
+        Admin::script('var birthday_input = document.getElementById("birthday"); birthday_input.addEventListener("oninput", function() { console.log("hello world!!!!!"); }, false);');
         return Admin::form(Member::class, function (Form $form) {
             
             $form->tab('基本信息', function (Form $form) {
