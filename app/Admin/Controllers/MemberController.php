@@ -134,7 +134,11 @@ class MemberController extends Controller
             $grid->column('certification_number', '认证号码');
             $grid->column('certification_date', '证书到期日')
                 ->display(function ($time) {
-                    return date('Y-m-d', strtotime($time));
+                    if ($time != null) {
+                        return date('Y-m-d', strtotime($time));
+                    } else {
+                        return '';
+                    }
                 });
             
             // $states = [ // 设置text、color、和存储值
