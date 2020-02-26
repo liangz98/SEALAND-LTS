@@ -130,13 +130,20 @@ class MemberController extends Controller
             });
             $grid->column('email', 'E-Mail');
             $grid->column('mobile_phone', '手机号码');
-            $states = [ // 设置text、color、和存储值
-                'on'  => ['value' => '01', 'text' => '正常', 'color' => 'primary'],
-                'off' => ['value' => '02', 'text' => '禁用', 'color' => 'default'],
-            ];
-            $grid->column('status', '状态')->switch($states);
+    
+            $grid->column('certification_number', '认证号码');
+            $grid->column('certification_date', '证书到期日')
+                ->display(function ($time) {
+                    return date('Y-m-d', strtotime($time));
+                });
+            
+            // $states = [ // 设置text、color、和存储值
+            //     'on'  => ['value' => '01', 'text' => '正常', 'color' => 'primary'],
+            //     'off' => ['value' => '02', 'text' => '禁用', 'color' => 'default'],
+            // ];
+            // $grid->column('status', '状态')->switch($states);
 
-            $grid->created_at('创建时间');
+            // $grid->created_at('创建时间');
             // $grid->updated_at('更新时间');
     
             
@@ -145,17 +152,19 @@ class MemberController extends Controller
                 // $filter->disableIdFilter();
                 $filter->like('name', '名字');
     
-                $filter->like('member_number', '档案编号');
-        
-                $filter->like('email', 'E-Mail');
+                $filter->like('certification_number', '认证号码');
     
+                $filter->like('member_number', '会员编号');
+    
+                $filter->like('city', '城市');
+        
                 $filter->like('mobile_phone', '手机号码');
     
-                $filter->equal('status', '状态')
-                       ->select([
-                           '01' => '正常',
-                           '02' => '禁用',
-                       ]);
+                $filter->like('certification_level', '证书级别');
+    
+                $filter->like('industry', '从事行业');
+    
+                $filter->like('certification_date', '证书到期日');
             });
             
             // 排序
