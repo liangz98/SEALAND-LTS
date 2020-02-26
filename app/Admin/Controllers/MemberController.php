@@ -150,6 +150,9 @@ class MemberController extends Controller
             // 筛选功能
             $grid->filter(function (Grid\Filter $filter) {
                 // $filter->disableIdFilter();
+                // 去掉默认的id过滤器
+                $filter->disableIdFilter();
+                
                 $filter->like('name', '名字');
     
                 $filter->like('certification_number', '认证号码');
@@ -164,7 +167,7 @@ class MemberController extends Controller
     
                 $filter->like('industry', '从事行业');
     
-                $filter->like('certification_date', '证书到期日');
+                $filter->like('certification_date', '证书到期日')->date();
             });
             
             // 排序
@@ -227,7 +230,9 @@ class MemberController extends Controller
                 
             })->tab("认证信息", function (Form $form) {
                 $form->text('certification_id', '认证');
-                
+                $form->text('certification_number', '认证号码');
+                $form->text('certification_level', '证书级别');
+                $form->text('certification_date', '证书到期日');
             });
            
         });
