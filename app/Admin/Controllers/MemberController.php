@@ -156,7 +156,7 @@ class MemberController extends Controller
     
                 $filter->like('member_number', '会员编号');
     
-                $filter->like('city', '城市');
+                $filter->like('city_code', '城市');
         
                 $filter->like('mobile_phone', '手机号码');
     
