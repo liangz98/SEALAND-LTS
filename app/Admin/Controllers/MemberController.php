@@ -191,6 +191,7 @@ class MemberController extends Controller
      */
     protected function form()
     {
+        Admin::script('console.log("hello world");');
         return Admin::form(Member::class, function (Form $form) {
             
             $form->tab('基本信息', function (Form $form) {
