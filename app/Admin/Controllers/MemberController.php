@@ -167,7 +167,7 @@ class MemberController extends Controller
     
                 $filter->like('industry', '从事行业');
     
-                $filter->like('certification_date', '证书到期日')->date();
+                $filter->lt('certification_date', '证书到期日')->date();
             });
             
             // 排序
