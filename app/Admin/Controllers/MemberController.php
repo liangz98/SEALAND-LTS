@@ -216,6 +216,8 @@ class MemberController extends Controller
                     'off' => ['value' => 'F', 'text' => '女', 'color' => 'danger'],
                 ];
                 $form->switch('gender', '性别')->states($states)->default('M');
+                $form->date('birthday', '出生日期');
+                $form->number('age', '年龄');
                 $form->email('oth_email', '其他邮箱')->rules('nullable');
                 $form->mobile('oth_mobile_phone', '其他手机号码')->options(['mask' => '999 9999 9999']);
                 $form->text('mailing_address', '邮寄地址');
