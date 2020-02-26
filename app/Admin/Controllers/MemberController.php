@@ -80,7 +80,7 @@ class MemberController extends Controller
     
             $table2 = new Table($headers, $member->toArray());
     
-            $content->body((new Box('Table-2', $table2))->style('info')
+            $content->body((new Box('', $table2))->style('info')
                                                         ->solid());
         });
     }
@@ -191,7 +191,7 @@ class MemberController extends Controller
      */
     protected function form()
     {
-        Admin::script('$("#birthday").change(function(){ console.log("hello world!!!!!"); });');
+        // Admin::script('$("#birthday").change(function(){ console.log("hello world!!!!!"); });');
         return Admin::form(Member::class, function (Form $form) {
             
             $form->tab('基本信息', function (Form $form) {
@@ -218,7 +218,7 @@ class MemberController extends Controller
                 ];
                 $form->switch('gender', '性别')->states($states)->default('M');
                 $form->date('birthday', '出生日期');
-                $form->number('age', '年龄');
+                // $form->number('age', '年龄');
                 $form->email('oth_email', '其他邮箱')->rules('nullable');
                 $form->mobile('oth_mobile_phone', '其他手机号码')->options(['mask' => '999 9999 9999']);
                 $form->text('mailing_address', '邮寄地址');
@@ -231,6 +231,7 @@ class MemberController extends Controller
                 $form->text('street', '街道');
                 $form->text('address', '地址');
             })->tab("公司信息", function (Form $form) {
+                $form->text('industry', '行业');
                 $form->text('company_name', '公司名称');
                 $form->text('title', '职位');
                 $form->text('company_address', '公司地址');
