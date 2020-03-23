@@ -188,6 +188,9 @@
 @stop
 
 @section('scripts')
-
-	$('#myModal').modal('show');
+<script type="text/javascript">
+	$(function () {
+		$('#myModal').modal('show');
+	});
+</script>
 @stop
