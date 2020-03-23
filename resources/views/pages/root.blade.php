@@ -159,27 +159,18 @@
 
 
 	<!--================ pricing Area =================-->
-	<div class="alert alert-warning alert-dismissible" role="alert">
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<strong>特此通告!</strong>
-		<p>NACE国际针对新冠状病毒肺炎（Covid-19）可能对线下上课学员和老师的健康有影响，暂时关闭了它在美国休斯顿总部和中东杜拜的培训中心，把大部分线下授课的课程暂时取消。但为了满足行业对培训的需求，它将首先推出CIP-1涂装检查员一级英文在线课程，让学员可以进行远程学习。NACE中国上海代表处也在3月20日的公众号上宣布了这一信息。</p>
-		<p>随着中国方面疫情的好转，我司会按原计划在五月中旬开始恢复举办正常的CIP课程。除非中国的疫情高峰再临，才会考虑举办线上远程课程。</p>
-		<p>特此澄清各种纷乱信息，谢谢各位！</p>
-		<p>2020年3月21日</p>
-	</div>
-
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
+	<div class="modal fade bs-example-modal-lg" id="bulletinModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title">特此通告!</h4>
+					<h3 class="modal-title text-center">特此通告</h3>
 				</div>
 				<div class="modal-body">
-					<p>NACE国际针对新冠状病毒肺炎（Covid-19）可能对线下上课学员和老师的健康有影响，暂时关闭了它在美国休斯顿总部和中东杜拜的培训中心，把大部分线下授课的课程暂时取消。但为了满足行业对培训的需求，它将首先推出CIP-1涂装检查员一级英文在线课程，让学员可以进行远程学习。NACE中国上海代表处也在3月20日的公众号上宣布了这一信息。</p>
-					<p>随着中国方面疫情的好转，我司会按原计划在五月中旬开始恢复举办正常的CIP课程。除非中国的疫情高峰再临，才会考虑举办线上远程课程。</p>
-					<p>特此澄清各种纷乱信息，谢谢各位！</p>
-					<p>2020年3月21日</p>
+					<p class="lead">　　NACE国际针对新冠状病毒肺炎（Covid-19）可能对线下上课学员和老师的健康有影响，暂时关闭了它在美国休斯顿总部和中东杜拜的培训中心，把大部分线下授课的课程暂时取消。但为了满足行业对培训的需求，它将首先推出CIP-1涂装检查员一级英文在线课程，让学员可以进行远程学习。NACE中国上海代表处也在3月20日的公众号上宣布了这一信息。</p>
+					<p class="lead">　　随着中国方面疫情的好转，我司会按原计划在五月中旬开始恢复举办正常的CIP课程。除非中国的疫情高峰再临，才会考虑举办线上远程课程。</p>
+					<p class="lead">　　特此澄清各种纷乱信息，谢谢各位！</p>
+					<p class="text-right">2020年3月21日</p>
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
@@ -190,7 +181,7 @@
 @section('scripts')
 <script type="text/javascript">
 	$(function () {
-		$('#myModal').modal('show');
+		$('#bulletinModal').modal('show');
 	});
 </script>
 @stop
