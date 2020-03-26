@@ -164,13 +164,14 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h3 class="modal-title text-center">特此通告</h3>
+					<h3 class="modal-title text-center">【重磅】NACE国际推出涂装检验师CIP融合课程！</h3>
 				</div>
 				<div class="modal-body">
-					<p class="lead">　　NACE国际针对新冠状病毒肺炎（Covid-19）可能对线下上课学员和老师的健康有影响，暂时关闭了它在美国休斯顿总部和中东杜拜的培训中心，把大部分线下授课的课程暂时取消。但为了满足行业对培训的需求，它将首先推出CIP-1涂装检查员一级<span style="color: #d9534f;">英文在线课程</span>，让学员可以进行远程学习。NACE中国上海代表处也在3月20日的公众号上宣布了这一信息。</p>
-					<p class="lead">　　随着中国方面疫情的好转，我司会按原计划在五月中旬开始恢复举办正常的CIP课程。除非中国的疫情高峰再临，才会考虑举办线上远程课程。</p>
-					<p class="lead">　　谢谢各位！</p>
-					<p class="text-right">2020年3月21日</p>
+					<p class="lead">　　线上理论+线下面授，新模式新思路！</p>
+					<p class="lead">　　由于新冠疫情对全世界的影响，NACE国际现推出涂装检验师中文CIP1和CIP2的融合课程。课程将采取直播授课形式，学生将可以和教师进行线上理论课程内容，教师也实时同步解答学员提出的问题并与学员互动，通过融合课程学习与面授相同的课程，经过课后预约考试可以取得相同的NACE认证证书。</p>
+					<p class="lead">　　欢迎大家踊跃报名！</p>
+					<p class="lead">　　具体见最新消息……</p>
+{{--					<p class="text-right">2020年3月21日</p>--}}
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
