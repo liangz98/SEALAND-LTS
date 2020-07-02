@@ -101,7 +101,7 @@
             <h4>Copyright &copy; 2017 <a href="/">{{ trans('commons.services_limited') }} </a> {{ trans('commons.all_rights_reserved') }}</h4>
         </div>
         <div class="container">
-            <h4>ICP证：<a href="http://www.beian.miit.gov.cn" target="_blank">粤ICP备14011198号</a></h4>
+            <h4>ICP证：<a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备20024275号</a></h4>
         </div>
     </div>
 </footer>
