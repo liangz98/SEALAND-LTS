@@ -159,6 +159,7 @@
 
 
 	<!--================ pricing Area =================-->
+	{{--
 	<div class="modal fade bs-example-modal-lg" id="bulletinModal" tabindex="-1" role="dialog">
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
@@ -172,11 +173,11 @@
 					<p class="lead">　　欢迎大家踊跃报名！</p>
 					<p class="lead">　　<a href="/snews/21"><span style="color: #428bca">NACE国际举办CIP1在线融合课程的开课通知</span></a></p>
 					<p class="lead">　　<a href="/snews/22"><span style="color: #428bca">NACE国际举办CIP2在线融合课程的开课通知</span></a></p>
-{{--					<p class="text-right">2020年3月21日</p>--}}
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
+	--}}
 	<!--================ End pricing Area =================-->
 @stop
 
