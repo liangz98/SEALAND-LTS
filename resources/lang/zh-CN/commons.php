@@ -33,7 +33,7 @@ return [
     'Chinese' => '中文',
     'English' => 'English',
     /* 版权 */
-    'services_limited' => '海岸华宝信息咨询服务',
+    'services_limited' => '施蓝德防腐技术咨询（北京）有限公司',
     'all_rights_reserved' => '版权所有',
     
     /* 公司信息 */
