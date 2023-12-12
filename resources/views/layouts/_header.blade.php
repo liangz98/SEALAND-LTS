@@ -9,7 +9,7 @@
                     <h4><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:#">{{ trans('commons.contact_us') }}: rosemary@sealandconsulting.com</a></h4>
                 </div>
                 <div class="header_c_text visible-xs-block">
-                    <ul class="list-inline">
+                    <ul class="list-inline hidden">
                     @foreach (Config::get('app.locales') as $lang => $language)
                         @if ($lang != App::getLocale())
                             <li>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="pull-right hidden-xs hidden-sm">
-                <ul class="list-inline">
+                <ul class="list-inline hidden">
                     @foreach (Config::get('app.locales') as $lang => $language)
                         @if ($lang != App::getLocale())
                             <li><a href="{{ route('lang.change', $lang) }}"><img src="/images/language/{{$lang}}.png" style="margin-top: -5px;" /> {{ trans('commons.'.$language) }}</a></li>
